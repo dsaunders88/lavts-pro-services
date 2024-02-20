@@ -2,36 +2,79 @@
 
 <!-- /layout.antlers.html -->
 <!DOCTYPE html>
-<html
-    lang="{{ site:short_locale }}"
-    class="antialiased scroll-smooth scroll-pt-4"
->
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-        {{ vite src="resources/css/site.css|resources/js/site.js" }} {{
-        partial:statamic-peak-seo::snippets/seo }} {{
-        partial:statamic-peak-browser-appearance::snippets/browser_appearance }}
-        {{ partial:statamic-peak-tools::snippets/live_preview }}
-    </head>
-    <body
-        class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white"
-    >
-        {{ stack:seo_body }} {{ partial:statamic-peak-tools::snippets/noscript
-        }} {{ partial:statamic-peak-tools::navigation/skip_to_content }} {{
-        partial:statamic-peak-tools::components/toolbar }} {{# {{
-        partial:layout/header }} #}}
-        <nav><a href="/">Home</a></nav>
-        {{ template_content }}
-        <footer>
-            {{ now | format('Y') }} {{ configuration:copyright_name ??
-            config:app:name }}
-        </footer>
-        {{# {{ partial:layout/footer }} #}}
-    </body>
+<html lang="{{ site:short_locale }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    {{ vite src="resources/css/site.css|resources/js/site.js" }} {{
+    partial:statamic-peak-seo::snippets/seo }} {{
+    partial:statamic-peak-browser-appearance::snippets/browser_appearance }} {{
+    partial:statamic-peak-tools::snippets/live_preview }}
+    <!-- Preload font styles -->
+    <link
+      rel="preload"
+      href="/fonts/nunitosans-regular-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/fonts/nunitosans-italic-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/fonts/nunitosans-black-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <!-- Inline font styles -->
+    <style>
+      @font-face {
+        font-family: "Nunito Sans";
+        src: url("/fonts/nunitosans-regular-webfont.woff2") format("woff2"),
+          url("/fonts/nunitosans-regular-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        src: url("/fonts/nunitosans-italic-webfont.woff2") format("woff2"),
+          url("/fonts/nunitosans-italic-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        src: url("/fonts/nunitosans-black-webfont.woff2") format("woff2"),
+          url("/fonts/nunitosans-black-webfont.woff") format("woff");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+  </head>
+  <body>
+    {{ stack:seo_body }} {{ partial:statamic-peak-tools::snippets/noscript }} {{
+    partial:statamic-peak-tools::navigation/skip_to_content }} {{# {{
+    partial:layout/header }} #}}
+    <nav class="content-wrapper"><a class="small-title" href="/">Home</a></nav>
+    {{ template_content }}
+    <footer class="content-wrapper">
+      {{ now | format('Y') }} {{ configuration:copyright_name ?? config:app:name
+      }}
+    </footer>
+    {{# {{ partial:layout/footer }} #}}
+  </body>
 </html>
 <!-- End: /layout.antlers.html -->

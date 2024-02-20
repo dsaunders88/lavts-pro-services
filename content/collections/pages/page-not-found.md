@@ -4,6 +4,7 @@ blueprint: page
 title: 'Page not found'
 page_builder:
   -
+    id: LwRFfuFD
     article:
       -
         type: heading
@@ -18,7 +19,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'The page you requested is not available (anymore).'
+            text: 'The page you requested is not available.'
     type: article
     enabled: true
 seo_noindex: true
@@ -26,6 +27,6 @@ seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
-updated_by: 66c6ff90-a9a2-42ba-a4e1-c0872e344786
-updated_at: 1646921434
+updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
+updated_at: 1708388428
 ---

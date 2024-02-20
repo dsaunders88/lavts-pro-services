@@ -1,4 +1,6 @@
-@import "tailwindcss/base";
-@import "custom";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "variables";
+@import "reset";
+@import "typography";
+@import "layout";
+@import "exception";
+@import "utilities";

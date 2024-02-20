@@ -1,0 +1,16 @@
+.skip-to-content {
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+  transform: translateY(-2rem);
+  opacity: 0;
+  top: 1rem;
+  left: 2rem;
+
+  &:focus-visible {
+    transform: translateY(0);
+    opacity: 1;
+    outline: 1px solid red;
+    outline-offset: 2px;
+  }
+}
