@@ -1,0 +1,19 @@
+title: 'Call to Action'
+fields:
+  -
+    handle: heading
+    field: hero.heading
+    config:
+      validate:
+        - required
+      width: 100
+  -
+    handle: description
+    field: hero.description
+    config:
+      width: 100
+  -
+    import: buttons
+  -
+    handle: background_image
+    field: common.background_image

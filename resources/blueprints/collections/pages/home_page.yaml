@@ -1,0 +1,135 @@
+title: 'Home Page'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Hero
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            import: hero
+            prefix: hero_
+      -
+        display: About
+        fields:
+          -
+            import: presentation
+            prefix: presentation_
+      -
+        display: Clients
+        fields:
+          -
+            handle: clients_section_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Section Title'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: clients_logos
+            field:
+              mode: grid
+              container: images
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Logos
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              folder: logos
+      -
+        display: Benefits
+        fields:
+          -
+            handle: benefits_heading_highlight
+            field: common.heading_highlight
+            config:
+              buttons:
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - link
+                - image
+                - table
+          -
+            handle: benefits
+            field:
+              mode: default
+              type: collections
+              display: 'Benefits Collection'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: 'Call to Action'
+        fields:
+          -
+            import: call_to_action
+            prefix: cta_
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Basic SEO'
+        instructions: 'Basic SEO fields.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: 'Open Graph'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              folder: templates

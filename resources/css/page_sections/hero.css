@@ -1,0 +1,20 @@
+.hero {
+  --flow-space: var(--space-l);
+  align-items: center;
+  text-align: center;
+
+  & .eyebrow {
+    margin-block-end: var(--space-2xs);
+    color: color-mix(in srgb, var(--color-primary-base) 75%, transparent);
+  }
+
+  & .heading {
+    font-size: var(--step-5);
+  }
+
+  & .links {
+    &.cluster {
+      --cluster-justify: center;
+    }
+  }
+}

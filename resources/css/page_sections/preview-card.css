@@ -1,0 +1,38 @@
+.preview-card {
+  align-items: flex-start;
+
+  & h3 {
+    font-size: var(--step-1);
+  }
+
+  & svg {
+    color: var(--color-primary-base);
+  }
+
+  & p {
+    font-size: 16px;
+  }
+
+  & footer {
+    &.cluster {
+      --cluster-space: 0.5rem;
+    }
+
+    & svg {
+      position: relative;
+      top: 1px;
+      opacity: 0;
+      transform: translateX(-1px);
+      transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+    }
+
+    & a {
+      &:hover + svg {
+        opacity: 1;
+        transform: translateX(1px);
+      }
+    }
+  }
+}

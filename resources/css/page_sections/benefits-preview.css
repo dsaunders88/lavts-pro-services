@@ -1,0 +1,56 @@
+@import "preview-card";
+
+.benefits-preview {
+  margin-block: var(--section-spacer);
+
+  & h2 {
+    text-align: center;
+    margin-block-end: var(--space-2xl);
+  }
+
+  & .grid {
+    --column-gap: var(--space-xl);
+    --row-gap: var(--space-2xl);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+    position: relative;
+
+    & .rules {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
+      & > :is(:nth-child(1), :nth-child(2)) {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: var(--color-primary-light);
+        mask-image: linear-gradient(to bottom, transparent, black, transparent);
+      }
+
+      & > :nth-child(1) {
+        left: calc(33.3% - 9px);
+        transform: translateX(-50%);
+      }
+
+      & > :nth-child(2) {
+        left: calc(66.6% + 9px);
+        transform: translateX(50%);
+      }
+
+      & > :nth-child(3) {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--color-primary-light);
+        mask-image: linear-gradient(to right, transparent, black, transparent);
+      }
+    }
+  }
+}

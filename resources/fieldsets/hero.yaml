@@ -1,0 +1,34 @@
+title: Hero
+fields:
+  -
+    handle: heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Heading
+      instructions: 'Main idea/callout heading.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: heading_highlight
+    field: common.heading_highlight
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: Description
+      instructions: 'Paragraph description.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    import: buttons

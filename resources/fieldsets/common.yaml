@@ -26,6 +26,25 @@ fields:
       listable: false
       display: Entry
   -
+    handle: heading_highlight
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      heading_anchors: false
+      smartypants: false
+      table_of_contents: false
+      antlers: false
+      type: markdown
+      display: 'Heading Highlight'
+      instructions: 'Add <span> HTML tags around words to show as a highlighted color in the design. Auto-add line breaks.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: text_rich
     field:
       buttons:
@@ -100,6 +119,19 @@ fields:
       inline: false
       hide_display: false
   -
+    handle: text_description
+    field:
+      character_limit: '200'
+      antlers: false
+      type: textarea
+      display: 'Basic Paragraph'
+      instructions: 'Use for previews and basic paragraphs where no markup or styling is needed.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: text_plain
     field:
       type: textarea
@@ -122,3 +154,21 @@ fields:
       default: md
       listable: hidden
       display: Size
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Background Image'
+      instructions: 'Set the background image for this section. Will show as faded/layered behind text elements.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

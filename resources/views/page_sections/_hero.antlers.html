@@ -1,0 +1,25 @@
+{{#
+  @name Hero Section
+  @desc Hero page section for top of page.
+    @param eyebrow The above heading.
+#}}
+
+<article class="hero">
+  <div class="text-wrapper | flow">
+    <header>
+      {{ if eyebrow }}
+        <div class="eyebrow | small-title text-faded">{{ eyebrow }}</div>
+      {{ /if }}
+      <h1 class="heading | text-gradient">
+        {{ hero_heading_highlight or 'Heading' }}
+      </h1>
+    </header>
+    <p>{{ hero_description or 'Description'
+ | widont }}</p>
+    <div class="links | cluster">
+      {{ hero_buttons }}
+        {{ partial:components/button_link style="{{index === 0 ? "primary" : "ghost-primary"}}" }}
+      {{ /hero_buttons }}
+    </div>
+  </div>
+</article>

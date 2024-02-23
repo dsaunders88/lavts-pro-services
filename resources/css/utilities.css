@@ -33,31 +33,11 @@
   display: inline-flex;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .center-all {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-.balanced {
-  text-wrap: balance;
-}
-
-.pretty {
-  text-wrap: pretty;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .leading-normal {
@@ -95,13 +75,41 @@
 }
 
 /* Text */
+.text-gradient {
+  & span {
+    background: var(--color-background-gradient-primary);
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+  }
+}
 
-.bold {
+.text-center {
+  text-align: center;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-balanced {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
   font-weight: 700;
 }
 
-.color-text-faded {
-  color: var(--color-gray-4);
+.text-faded {
+  color: color-mix(in srgb, currentColor 75%, transparent);
 }
 
 .text-step--2 {

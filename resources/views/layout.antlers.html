@@ -1,5 +1,4 @@
 {{# @name Layout @desc The default layout file. #}}
-
 <!-- /layout.antlers.html -->
 <!DOCTYPE html>
 <html lang="{{ site:short_locale }}">
@@ -10,10 +9,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    {{ vite src="resources/css/site.css|resources/js/site.js" }} {{
-    partial:statamic-peak-seo::snippets/seo }} {{
-    partial:statamic-peak-browser-appearance::snippets/browser_appearance }} {{
-    partial:statamic-peak-tools::snippets/live_preview }}
+    {{ vite src="resources/css/site.css|resources/js/site.js" }}
+    {{ stack:styles }}
+    {{ partial:statamic-peak-seo::snippets/seo }}
+    {{ partial:statamic-peak-browser-appearance::snippets/browser_appearance }}
+    {{ partial:statamic-peak-tools::snippets/live_preview }}
     <!-- Preload font styles -->
     <link
       rel="preload"
@@ -31,6 +31,13 @@
     />
     <link
       rel="preload"
+      href="/fonts/nunitosans-bold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
       href="/fonts/nunitosans-black-webfont.woff2"
       as="font"
       type="font/woff2"
@@ -40,7 +47,8 @@
     <style>
       @font-face {
         font-family: "Nunito Sans";
-        src: url("/fonts/nunitosans-regular-webfont.woff2") format("woff2"),
+        src:
+          url("/fonts/nunitosans-regular-webfont.woff2") format("woff2"),
           url("/fonts/nunitosans-regular-webfont.woff") format("woff");
         font-weight: 400;
         font-style: normal;
@@ -48,7 +56,8 @@
       }
       @font-face {
         font-family: "Nunito Sans";
-        src: url("/fonts/nunitosans-italic-webfont.woff2") format("woff2"),
+        src:
+          url("/fonts/nunitosans-italic-webfont.woff2") format("woff2"),
           url("/fonts/nunitosans-italic-webfont.woff") format("woff");
         font-weight: 400;
         font-style: italic;
@@ -56,25 +65,49 @@
       }
       @font-face {
         font-family: "Nunito Sans";
-        src: url("/fonts/nunitosans-black-webfont.woff2") format("woff2"),
+        src:
+          url("/fonts/nunitosans-medium-webfont.woff2") format("woff2"),
+          url("/fonts/nunitosans-medium-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        src:
+          url("/fonts/nunitosans-bold-webfont.woff2") format("woff2"),
+          url("/fonts/nunitosans-bold-webfont.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        src:
+          url("/fonts/nunitosans-black-webfont.woff2") format("woff2"),
           url("/fonts/nunitosans-black-webfont.woff") format("woff");
         font-weight: 900;
         font-style: normal;
         font-display: swap;
       }
     </style>
+    <!-- Font Awesome Icons -->
+    <script defer src="/fontawesome/brands.min.js"></script>
+    <script defer src="/fontawesome/duotone.min.js"></script>
+    <script defer src="/fontawesome/solid.min.js"></script>
+    <script defer src="/fontawesome/fontawesome.min.js"></script>
   </head>
   <body>
-    {{ stack:seo_body }} {{ partial:statamic-peak-tools::snippets/noscript }} {{
-    partial:statamic-peak-tools::navigation/skip_to_content }} {{# {{
-    partial:layout/header }} #}}
-    <nav class="content-wrapper"><a class="small-title" href="/">Home</a></nav>
+    {{ stack:seo_body }}
+    {{ partial:statamic-peak-tools::snippets/noscript }}
+    {{ partial:statamic-peak-tools::navigation/skip_to_content }}
+    {{#
+  {{ partial:layout/header }}
+#}}
+    {{ partial:navigation/utility_nav }}
+    {{ partial:navigation/site_header }}
     {{ template_content }}
-    <footer class="content-wrapper">
-      {{ now | format('Y') }} {{ configuration:copyright_name ?? config:app:name
-      }}
-    </footer>
-    {{# {{ partial:layout/footer }} #}}
+    {{ partial:navigation/site_footer }}
   </body>
 </html>
 <!-- End: /layout.antlers.html -->

@@ -1,0 +1,31 @@
+{{#
+  @name CTA Section
+  @desc Call to action page section.
+#}}
+
+<article class="cta">
+  <div class="text-wrapper | flow">
+    <div class="flow">
+      <h2 class="heading">{{ cta_heading or 'Heading' }}</h2>
+      <p>{{ cta_description or 'Description' }}</p>
+    </div>
+    <div class="links | cluster">
+      {{ cta_buttons }}
+        {{ partial:components/button_link style="{{index === 0 ? "ghost" : "ghost-primary"}}" }}
+      {{ /cta_buttons }}
+    </div>
+  </div>
+  {{ if cta_background_image }}
+    {{ glide :src="cta_background_image" preset="hero" }}
+      <img
+        class="bg-image"
+        src="{{ url }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        alt="{{ alt }}"
+        loading="lazy"
+        decoding="async"
+      />
+    {{ /glide }}
+  {{ /if }}
+</article>

@@ -1,0 +1,38 @@
+title: Presentation
+fields:
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Section Title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: heading_highlight
+    field: common.heading_highlight
+  -
+    handle: text_description
+    field: common.text_description
+  -
+    handle: list
+    field:
+      type: list
+      display: List
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: image
+    field: common.image
+    config:
+      display: 'Featured Image'
+  -
+    handle: background_image
+    field: common.background_image

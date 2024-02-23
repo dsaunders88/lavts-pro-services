@@ -1,0 +1,99 @@
+@import "../page_sections/hero.css";
+@import "../page_sections/benefits-preview";
+@import "../page_sections/cta.css";
+
+main {
+  margin-block-start: calc(var(--section-spacer) * 0.5);
+  /* margin-block-end: var(--section-spacer); */
+}
+
+.about-presentation {
+  position: relative;
+  background-color: var(--color-neutral-light);
+  margin-block: var(--section-spacer);
+  padding-block: var(--section-spacer);
+
+  & .content-wrapper {
+    z-index: 2;
+  }
+
+  & header {
+    &.flow {
+      gap: var(--space-3xs);
+    }
+  }
+
+  & .has-sidebar {
+    --main-min-width: 45%;
+    align-items: center;
+
+    & > .flow {
+      gap: var(--space-m);
+    }
+  }
+
+  & .featured-img {
+    width: 30rem;
+  }
+
+  & ul {
+    columns: 2;
+
+    & li {
+      margin-block-end: var(--space-2xs);
+    }
+
+    & svg {
+      color: var(--color-primary-bright);
+    }
+  }
+
+  & .bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    mix-blend-mode: color-burn;
+    opacity: 0.3;
+    object-fit: cover;
+  }
+}
+
+.clients {
+  position: relative;
+  margin-block-start: calc(var(--section-spacer) * 0.25 * -1);
+  margin-block-end: var(--section-spacer);
+  padding-block-end: calc(var(--section-spacer) * 0.75);
+
+  &.flow {
+    gap: var(--space-m);
+  }
+
+  & .small-title {
+    color: var(--color-primary-base);
+  }
+
+  & .cluster {
+    --cluster-space: var(--space-xl);
+    --cluster-justify: center;
+  }
+
+  & img {
+    height: 2rem;
+    filter: grayscale(1);
+    opacity: 0.8;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 70%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: var(--color-primary-light);
+    mask-image: linear-gradient(to right, transparent, black, transparent);
+  }
+}

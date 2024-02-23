@@ -1,0 +1,75 @@
+{{#
+  @name Home Template
+  @desc The home template.
+  @blueprint home_page
+#}}
+
+{{ push:styles }}
+  {{ vite src="resources/css/templates/home.css" }}
+{{ /push:styles }}
+<main class="home" id="content">
+  {{ partial:page_sections/hero eyebrow="{{title}}" }}
+  <article class="about-presentation">
+    <div class="content-wrapper">
+      <div class="has-sidebar">
+        <div class="flow">
+          <header class="flow">
+            <div class="eyebrow | small-title text-faded">
+              {{ presentation_section_title }}
+            </div>
+            <h2 class="heading | text-gradient">
+              {{ presentation_heading_highlight }}
+            </h2>
+          </header>
+          <p>{{ presentation_text_description }}</p>
+          {{ if presentation_list }}
+            <ul role="list">
+              {{ presentation_list }}
+                <li>
+                  <i class="fa-solid fa-circle-check fa-xs"></i>
+                  {{ value }}
+                </li>
+              {{ /presentation_list }}
+            </ul>
+          {{ /if }}
+        </div>
+        {{ glide :src="presentation_image" preset="featured" }}
+          <img
+            class="featured-img"
+            src="{{ url }}"
+            width="{{ width }}"
+            height="{{ hegith }}"
+            alt="{{ alt }}"
+            loading="lazy"
+            decoding="async"
+          />
+        {{ /glide }}
+      </div>
+    </div>
+    {{ if presentation_background_image }}
+      {{ glide :src="presentation_background_image" preset="hero" }}
+        <img
+          class="bg-image"
+          src="{{ url }}"
+          width="{{ width }}"
+          height="{{ height }}"
+          alt="{{ alt }}"
+          loading="lazy"
+          decoding="async"
+        />
+      {{ /glide }}
+    {{ /if }}
+  </article>
+  <div class="clients | content-wrapper | flow">
+    <h2 class="small-title text-center">{{ clients_section_title }}</h2>
+    <ul class="cluster" role="list">
+      {{ glide :src="clients_logos" }}
+        <li>
+          <img src="{{ url }}" height="100" alt="{{ alt }}" />
+        </li>
+      {{ /glide }}
+    </ul>
+  </div>
+  {{ partial:page_sections/benefits_preview }}
+  {{ partial:page_sections/cta }}
+</main>

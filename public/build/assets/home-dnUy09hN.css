@@ -1,0 +1,1 @@
+.hero{--flow-space:var(--space-l);text-align:center;align-items:center}.hero .eyebrow{color:color-mix(in srgb,var(--color-primary-base)75%,transparent);margin-bottom:var(--space-2xs)}.hero .heading{font-size:var(--step-5)}.hero .text-wrapper{max-width:calc(var(--section-spacer)*7);margin-left:auto;margin-right:auto}.hero .links.cluster{--cluster-justify:center}

@@ -1,0 +1,20 @@
+<div class="grid">
+  {{ grid_entries as="entry" }}
+    {{ entry }}
+      <article class="preview-card | flow">
+        <i class="fa-duotone fa-{{ icon or 'photo-film' }} fa-xl"></i>
+        <h3>{{ title }}</h3>
+        <p>{{ text_description }}</p>
+        <footer class="cluster">
+          <a href="{{ url }}">{{ link_text }}</a>
+          <i class="fa-solid fa-chevron-right fa-2xs"></i>
+        </footer>
+      </article>
+    {{ /entry }}
+  {{ /grid_entries }}
+  <div class="rules">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>

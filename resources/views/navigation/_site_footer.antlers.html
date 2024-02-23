@@ -1,0 +1,14 @@
+{{#
+  @name Site Footer
+  @desc The main site footer and navigation.
+#}}
+
+<footer class="site-footer">
+  <div class="content-wrapper | grid">
+    <div>
+      ©
+      {{ now | format('Y') }}
+      {{ configuration:copyright_name ?? config:app:name }}
+    </div>
+  </div>
+</footer>

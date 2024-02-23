@@ -1,0 +1,33 @@
+{{#
+  @name Site Header
+  @desc The main site header and navigation.
+#}}
+
+<header class="site-header | content-wrapper">
+  <a class="logo" href="/" title="LAVTS Pro Services">
+    <img src="/images/lavts-logo.png" width="200" alt="LAVTS Pro Services" />
+  </a>
+  <nav class="main-nav">
+    <ul role="list" class="cluster">
+      {{ nav:main }}
+        <li>
+          <a class="nav-link" href="{{ url }}">
+            {{ if title == "Video" }}
+              <i class="fa-solid fa-cassette-vhs"></i>
+            {{ elseif title == "Audio" }}
+              <i class="fa-solid fa-headphones"></i>
+            {{ elseif title == "Film" }}
+              <i class="fa-solid fa-film"></i>
+            {{ elseif title == "Photo" }}
+              <i class="fa-solid fa-camera"></i>
+            {{ elseif title == "More" }}
+              <i class="fa-solid fa-plus"></i>
+            {{ /if }}
+            {{ title }}
+          </a>
+        </li>
+      {{ /nav:main }}
+    </ul>
+  </nav>
+  {{ partial:components/button_link label="Get Started" }}
+</header>

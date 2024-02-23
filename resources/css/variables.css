@@ -5,44 +5,48 @@
   --font-heading: var(--font-primary);
   --font-heading-weight: 900;
   --leading-normal: 1.5;
-  --leading-tight: 1.2;
+  --leading-tight: 1.15;
+  --caps-letter-spacing: 0.15em;
 
   /* Colors */
-  --color-neutral-darker: #222222;
-  --color-neutral-base: #333333;
-  --color-primary-base: #750075;
-  --color-primary-dark: #460046;
-  --color-primary-bright: #a300a3;
-  --color-primary-light: #f7ebf4;
+  --color-neutral-base: #484b4c;
+  --color-neutral-darker: #2b3a42;
+  --color-neutral-darker-2: #24292b;
+  --color-neutral-darkest: #1c1f20;
+  --color-neutral-light: #f7f7f8;
+  --color-primary-base: #cc4d00;
+  --color-primary-dark: #ac4100;
+  --color-primary-bright: #ee7226;
+  --color-primary-light: #f0ccb6;
   --color-primary-light-background: color-mix(
     in srgb,
     var(--color-primary-light),
     transparent 50%
   );
   --color-white: #fff;
-  --color-accent-base: #d52d7e;
+  /* --color-accent-base: #d52d7e;
   --color-accent-light: #fea4d0;
   --color-secondary-base: #5108a1;
   --color-tertiary-base: #d79263;
-  --color-quaternary-base: #086f82;
+  --color-quaternary-base: #086f82; */
 
   --color-text-body: var(--color-neutral-base);
   --color-text-heading: var(--color-neutral-darker);
   --color-text-heading-emphasis: var(--color-primary-base);
   --color-text-body-light: var(--color-primary-light);
   --color-text-heading-light: var(--color-white);
-  --color-background-gradient: linear-gradient(
-    105deg,
+  --color-background-gradient-primary: linear-gradient(
+    90deg,
     var(--color-primary-base),
-    var(--color-accent-base)
+    var(--color-primary-bright)
   );
   --color-background-gradient-dark: linear-gradient(
-    105deg,
-    var(--color-primary-base),
-    var(--color-primary-dark)
+    180deg,
+    var(--color-neutral-darker-2),
+    var(--color-neutral-darkest)
   );
-  --color-button-background: var(--color-accent-base);
-  --color-button-text: var(--color-white);
+  /* --color-button-background: var(--color-accent-base);
+  --color-button-text: var(--color-white); */
 
   /* Fluid type scale */
   /* @link @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,18,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -86,19 +90,21 @@
 
   /* Layouts */
   --gutter: var(--space-s-m, 1rem);
-  --wrapper-max-width: 1366px;
+  --wrapper-max-width: 1280px;
 
   /* Other */
   --rounded-corners: 0.5rem;
   --rounded-corners-small: 0.25rem;
   --paragraph-measure: 65ch;
-  --section-spacer: 6rem;
+  --section-spacer: var(--space-3xl);
   --main-top-spacer: 10rem;
   --shadow-regular: 0 -3px 28px -3px rgb(43 0 43 / 18%);
   --shadow-light: 0 -3px 28px -3px rgb(43 0 43 / 8%);
   --accent-line-width: 4px;
   --text-opacity-shade: 0.75;
   --presentation-image-ratio: 4/5;
+  --focus-outline-color: var(--color-primary-bright);
+  --focus-outline-width: 2px;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,16 @@
+{{#
+  @name Default
+  @desc The default template.
+#}}
+
+<!-- /default.antlers.html -->
+<main class="content-wrapper" id="content">
+  {{ partial:components/hero eyebrow="{{title}}" }}
+  {{ partial:components/hero }}
+  {{#
+    {{ page_builder scope="block" }}
+      {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+  #}}
+</main>
+<!-- End: /default.antlers.html -->

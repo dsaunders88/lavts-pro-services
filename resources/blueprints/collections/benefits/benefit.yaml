@@ -1,0 +1,80 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+      -
+        display: 'Preview Fields'
+        instructions: 'Shortened titles and descriptions for preview cards and areas.'
+        fields:
+          -
+            handle: icon
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Icon
+              instructions: 'FontAwesome icon name, i.e. "user".'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: text_description
+            field: common.text_description
+          -
+            handle: link_text
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Link Text'
+              instructions: 'The label/text for the link to this benefit.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  seo:
+    display: SEO
+    sections:
+      -
+        display: SEO
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - benefits
+              max_items: 1
+              listable: false
+              localizable: true
+title: Benefit

@@ -48,6 +48,13 @@ a:not([class]) {
   line-height: 1.15;
 }
 
+/* Set default focus ring */
+*:is(:focus-visible) {
+  outline: color-mix(in srgb, var(--focus-outline-color) 80%, transparent) solid
+    var(--focus-outline-width);
+  outline-offset: 2px;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {

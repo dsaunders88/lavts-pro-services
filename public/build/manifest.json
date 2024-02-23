@@ -1,8 +1,13 @@
 {
   "resources/css/site.css": {
-    "file": "assets/site-7mBLF1Pe.css",
+    "file": "assets/site-4uFRUlpo.css",
     "isEntry": true,
     "src": "resources/css/site.css"
+  },
+  "resources/css/templates/home.css": {
+    "file": "assets/home-dnUy09hN.css",
+    "isEntry": true,
+    "src": "resources/css/templates/home.css"
   },
   "resources/js/site.js": {
     "file": "assets/site-cGsdHLhf.js",

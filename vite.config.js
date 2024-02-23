@@ -9,7 +9,11 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       laravel({
         refresh: true,
-        input: ["resources/css/site.css", "resources/js/site.js"],
+        input: [
+          "resources/css/site.css",
+          "resources/css/templates/home.css",
+          "resources/js/site.js",
+        ],
       }),
     ],
     server: {

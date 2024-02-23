@@ -1,0 +1,17 @@
+{{#
+  @name Button Link component
+  @desc Shortcut button link with styles and icon.
+  @param label Link text.
+  @param withArrow Boolean. Add a Fontawesome arrow icon.
+  @param style Set the link style.
+#}}
+
+<a
+  {{ partial:statamic-peak-tools::snippets/button_attributes }}
+  class="button-link {{ style or "primary" }}"
+>
+  {{ label }}
+  {{ if withArrow }}
+    <i class="fa-regular fa-arrow-right"></i>
+  {{ /if }}
+</a>

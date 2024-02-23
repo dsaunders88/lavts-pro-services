@@ -98,6 +98,9 @@ return [
 
         'presets' => [
             'replacement' => ['w' => 4500, 'fit' => 'max'],
+            'preview' => ['w' => 600, 'fit' => 'fill', 'q' => 75, 'fm' => 'webp'],
+            'featured' => ['w' => 1000, 'fit' => 'fill', 'q' => 95, 'fm' => 'webp'],
+            'hero' => ['w' => 1440, 'fit' => 'fill', 'q' => 90, 'fm' => 'webp']
         ],
 
         /*
