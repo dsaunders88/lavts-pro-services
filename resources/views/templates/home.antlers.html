@@ -13,13 +13,11 @@
     <div class="content-wrapper">
       <div class="has-sidebar">
         <div class="flow">
-          <header class="flow">
-            <div class="eyebrow | small-title text-faded">
+          <header class="heading | text-gradient">
+            <div class="eyebrow small-title | text-faded">
               {{ presentation_section_title }}
             </div>
-            <h2 class="heading | text-gradient">
-              {{ presentation_heading_highlight }}
-            </h2>
+            {{ presentation_heading_highlight }}
           </header>
           <p>{{ presentation_text_description }}</p>
           {{ if presentation_list }}
@@ -61,7 +59,9 @@
     {{ /if }}
   </article>
   <div class="clients | content-wrapper | flow">
-    <h2 class="small-title text-center">{{ clients_section_title }}</h2>
+    <h2 class="small-title | text-center">
+      {{ clients_section_title }}
+    </h2>
     <ul class="cluster" role="list">
       {{ glide :src="clients_logos" }}
         <li>
@@ -71,5 +71,19 @@
     </ul>
   </div>
   {{ partial:page_sections/benefits_preview }}
+  <article class="capabilities">
+    <div class="content-wrapper">
+      <div class="text-wrapper | flow">
+        <header class="heading | text-gradient">
+          <div class="eyebrow small-title | text-faded">
+            {{ capabilities_section_title }}
+          </div>
+          {{ capabilities_heading_highlight }}
+        </header>
+        <p>{{ capabilities_text_description | widont }}</p>
+      </div>
+      <div class="bg-element" aria-hidden="true"></div>
+    </div>
+  </article>
   {{ partial:page_sections/cta }}
 </main>

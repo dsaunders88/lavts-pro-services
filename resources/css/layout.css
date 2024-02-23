@@ -6,7 +6,7 @@
 }
 
 /* Narrower wrapper for section text previews */
-:is(.hero, .cta) {
+:is(article) {
   & .text-wrapper {
     position: relative;
     max-width: min(45rem, 60vw);

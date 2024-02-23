@@ -60,15 +60,6 @@ tabs:
           -
             handle: benefits_heading_highlight
             field: common.heading_highlight
-            config:
-              buttons:
-                - italic
-                - unorderedlist
-                - orderedlist
-                - quote
-                - link
-                - image
-                - table
           -
             handle: benefits
             field:
@@ -80,6 +71,27 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: Capabilities
+        fields:
+          -
+            handle: capabilities_section_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Section Title'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: capabilities_heading_highlight
+            field: common.heading_highlight
+          -
+            handle: capabilities_text_description
+            field: common.text_description
       -
         display: 'Call to Action'
         fields:

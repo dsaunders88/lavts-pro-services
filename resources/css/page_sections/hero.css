@@ -4,7 +4,6 @@
   text-align: center;
 
   & .eyebrow {
-    margin-block-end: var(--space-2xs);
     color: color-mix(in srgb, var(--color-primary-base) 75%, transparent);
   }
 

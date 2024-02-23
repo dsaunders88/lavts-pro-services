@@ -22,7 +22,7 @@ article:
 cta_heading: 'Ready to get started?'
 cta_description: 'Get personable and professional service for your next media transfer project.'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1708713964
+updated_at: 1708724783
 hero_buttons:
   -
     id: lswgzyge
@@ -48,9 +48,9 @@ cta_buttons:
     button_type: button
 template: templates/home
 hero_heading_highlight: |-
-  <span>Elevate</span> Your Media
-  with <span>Precision</span> Transfers
-presentation_heading_highlight: 'What Are <span>Pro</span> Services?'
+  <h1><strong>Elevate</strong> Your Media
+  with <strong>Precision</strong> Transfers</h1>
+presentation_heading_highlight: '<h2>What Are <strong>Pro</strong> Services?</h2>'
 presentation_text_plain: 'Our Los Angeles-based Pro Services offer personalized, high-quality solutions for industry-focused requests. Let our dedicated team prepare your media collection for professional or archival use.'
 presentation_list:
   - 'Production companies'
@@ -60,9 +60,7 @@ presentation_list:
   - Museums
   - 'and more'
 presentation_image: presentation-group.png
-benefits_heading_highlight: |-
-  <span>Benefits</span> of 
-  Pro Transfer <span>Solutions</span>
+benefits_heading_highlight: '<h2><strong>Benefits</strong> of <br>Pro Transfer <strong>Solutions</strong></h2>'
 benefits:
   - benefits
 cta_background_image: film-bg.jpg
@@ -74,4 +72,7 @@ clients_logos:
   - logos/netflix-logo.svg
   - logos/sony-logo.svg
   - logos/ucla-library-logo.svg
+capabilities_section_title: 'Format Capabilities'
+capabilities_heading_highlight: '<h2>Tailored <strong>Solutions</strong> for <br><strong>Any</strong> Media Type</h2>'
+capabilities_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
 ---

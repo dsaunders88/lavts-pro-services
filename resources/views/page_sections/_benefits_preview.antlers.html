@@ -1,6 +1,8 @@
 <div class="content-wrapper">
   <article class="benefits-preview">
-    <h2 class="text-gradient">{{ benefits_heading_highlight }}</h2>
+    <header class="heading | text-gradient">
+      {{ benefits_heading_highlight }}
+    </header>
     {{ collection from="{benefits}" as="grid_entries" }}
       {{ partial:components/preview_grid }}
     {{ /collection }}

@@ -6,13 +6,11 @@
 
 <article class="hero">
   <div class="text-wrapper | flow">
-    <header>
+    <header class="heading | text-gradient">
       {{ if eyebrow }}
-        <div class="eyebrow | small-title text-faded">{{ eyebrow }}</div>
+        <div class="eyebrow small-title | text-faded">{{ eyebrow }}</div>
       {{ /if }}
-      <h1 class="heading | text-gradient">
-        {{ hero_heading_highlight or 'Heading' }}
-      </h1>
+      {{ hero_heading_highlight or 'Heading' }}
     </header>
     <p>{{ hero_description or 'Description'
  | widont }}</p>
