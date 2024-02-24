@@ -49,7 +49,7 @@ a:not(.button-link, .logo):hover {
 
 .small-title {
   font-size: var(--step--1, 14px);
-  font-weight: 500;
+  font-weight: 700;
   font-family: var(--font-heading);
   line-height: var(--leading-normal);
   text-transform: uppercase;
