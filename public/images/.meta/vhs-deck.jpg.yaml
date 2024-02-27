@@ -1,4 +1,6 @@
-data: {  }
+data:
+  alt: 'Hand turning knob for VHS transfer deck controls.'
+  exempt_from_alt: false
 size: 264181
 last_modified: 1709056782
 width: 1920

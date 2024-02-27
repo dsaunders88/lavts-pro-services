@@ -39,16 +39,25 @@
       <p class="description">{{ currentTab.preview_text_description }}</p>
       <a href="{{ currentTab.url }}">{{ currentTab.preview_link_text }}</a>
     </div>
-    {{ glide :src="currentTab.featured_image" preset="featured" }}
-      <img
-        class="bg-image"
-        src="{{ url }}"
-        width="{{ width }}"
-        height="{{ height }}"
-        alt="{{ alt }}"
-        loading="lazy"
-        decoding="async"
-      />
-    {{ /glide }}
+    <img
+      class="bg-image"
+      src="{{ glide :src="currentTab.featured_image" preset="featured" }}"
+      alt="{{ currentTab.featured_image.alt or '' }}"
+      width="1000"
+      loading="eager"
+    />
+    {{#
+      {{ glide :src="currentTab.featured_image" preset="featured" }}
+        <img
+          class="bg-image"
+          src="{{ url }}"
+          width="{{ width }}"
+          height="{{ height }}"
+          alt="{{ alt }}"
+          loading="lazy"
+          decoding="async"
+        />
+      {{ /glide }}
+    #}}
   </div>
 </div>
