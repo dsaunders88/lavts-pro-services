@@ -1,0 +1,20 @@
+<article class="capabilities">
+  <div class="content-wrapper">
+    <div class="text-wrapper | flow">
+      <header class="heading | text-gradient">
+        <div class="eyebrow small-title | text-faded">
+          {{ capabilities_section_title }}
+        </div>
+        {{ capabilities_heading_highlight }}
+      </header>
+      <p>{{ capabilities_text_description | widont }}</p>
+    </div>
+    <div
+      id="tabs"
+      hx-get="/capabilities/video"
+      hx-trigger="load delay:100ms"
+      hx-target="#tabs"
+    ></div>
+    <div class="bg-element" aria-hidden="true"></div>
+  </div>
+</article>

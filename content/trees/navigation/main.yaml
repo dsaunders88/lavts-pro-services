@@ -2,11 +2,11 @@ tree:
   -
     id: 98ddb03c-88d7-4549-b685-0eaee6616e19
     title: Video
-    url: services/video
+    url: /services/video
   -
     id: 116fbf5c-33af-40da-9853-8600a903f969
     title: Audio
-    url: services/audio
+    url: /services/audio
   -
     id: 1b6b9f62-d647-43af-b80b-556a59834c14
     title: Film

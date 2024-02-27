@@ -22,7 +22,7 @@ article:
 cta_heading: 'Ready to get started?'
 cta_description: 'Get personable and professional service for your next media transfer project.'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1708724783
+updated_at: 1709006445
 hero_buttons:
   -
     id: lswgzyge
@@ -61,8 +61,6 @@ presentation_list:
   - 'and more'
 presentation_image: presentation-group.png
 benefits_heading_highlight: '<h2><strong>Benefits</strong> of <br>Pro Transfer <strong>Solutions</strong></h2>'
-benefits:
-  - benefits
 cta_background_image: film-bg.jpg
 presentation_background_image: film-reel.png
 presentation_section_title: About
@@ -75,4 +73,8 @@ clients_logos:
 capabilities_section_title: 'Format Capabilities'
 capabilities_heading_highlight: '<h2>Tailored <strong>Solutions</strong> for <br><strong>Any</strong> Media Type</h2>'
 capabilities_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
+services:
+  - services
+benefits:
+  - benefits
 ---

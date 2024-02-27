@@ -1,8 +1,9 @@
-title: Benefits
-template: templates/benefits-show
+title: Services
+template: templates/interior
 layout: layout
+mount: 5add62ea-f5e1-41ba-8c9d-2e4107c5866a
 revisions: false
-route: '/benefits/{slug}'
+route: '{mount}/{slug}'
 sort_dir: desc
 date_behavior:
   past: public

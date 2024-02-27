@@ -1,0 +1,31 @@
+title: 'Preview Fields'
+fields:
+  -
+    handle: icon
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Icon
+      instructions: 'FontAwesome icon name, i.e. "user".'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: text_description
+    field: common.text_description
+  -
+    handle: link_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Link Text'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      instructions: 'The label/text for the link to this entry.'

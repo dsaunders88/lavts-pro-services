@@ -71,19 +71,6 @@
     </ul>
   </div>
   {{ partial:page_sections/benefits_preview }}
-  <article class="capabilities">
-    <div class="content-wrapper">
-      <div class="text-wrapper | flow">
-        <header class="heading | text-gradient">
-          <div class="eyebrow small-title | text-faded">
-            {{ capabilities_section_title }}
-          </div>
-          {{ capabilities_heading_highlight }}
-        </header>
-        <p>{{ capabilities_text_description | widont }}</p>
-      </div>
-      <div class="bg-element" aria-hidden="true"></div>
-    </div>
-  </article>
+  {{ partial:page_sections/capabilities }}
   {{ partial:page_sections/cta }}
 </main>

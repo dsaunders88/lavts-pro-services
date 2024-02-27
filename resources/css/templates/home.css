@@ -1,5 +1,6 @@
 @import "../page_sections/hero.css";
 @import "../page_sections/benefits-preview";
+@import "../page_sections/tabs.css";
 @import "../page_sections/cta.css";
 
 main.home {
@@ -112,7 +113,6 @@ main.home {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: color-mix(in srgb, var(--color-white) 75%, transparent);
 
     & .content-wrapper {
       width: 100%;
@@ -120,6 +120,10 @@ main.home {
       padding-block: calc(var(--section-spacer) * 0.75);
       border-radius: var(--rounded-corners);
       overflow: hidden;
+
+      & .text-wrapper {
+        color: color-mix(in srgb, var(--color-white) 75%, transparent);
+      }
 
       & .bg-element {
         position: absolute;
@@ -133,6 +137,7 @@ main.home {
       }
 
       & :is(*:not(.bg-element)) {
+        position: relative;
         z-index: 2;
       }
     }

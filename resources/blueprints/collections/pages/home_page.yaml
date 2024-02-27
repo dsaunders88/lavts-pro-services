@@ -92,6 +92,17 @@ tabs:
           -
             handle: capabilities_text_description
             field: common.text_description
+          -
+            handle: services
+            field:
+              mode: default
+              type: collections
+              display: 'Services Collection'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
       -
         display: 'Call to Action'
         fields:

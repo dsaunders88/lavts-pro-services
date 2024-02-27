@@ -1,0 +1,26 @@
+<div class="tabs-wrapper">
+  <ul class="tabs-buttons | flow" role="tablist">
+    {{ paramId = id }}
+    {{ collection:services }}
+      <li>
+        <button
+          hx-get="/capabilities/{{ preview_title | lower }}"
+          hx-swap="settle:400ms"
+          role="tab"
+          class="{{ preview_title | lower == paramId ? 'active' : '' }}"
+          aria-selected="{{ preview_title | lower == paramId ? 'true' : 'false' }}"
+          aria-controls="tab-content"
+        >
+          {{ preview_title }}
+        </button>
+      </li>
+    {{ /collection:services }}
+  </ul>
+  <div id="tab-content" class="tabs-content" role="tabpanel">
+    <div class="text | flow">
+      <h3 class="heading">{{ currentTab.title }}</h3>
+      <p class="description">{{ currentTab.preview_text_description }}</p>
+      <a href="{{ currentTab.url }}">{{ currentTab.preview_link_text }}</a>
+    </div>
+  </div>
+</div>

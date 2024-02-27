@@ -1,0 +1,83 @@
+.tabs-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-l);
+  max-width: 80%;
+  margin-inline: auto;
+  margin-block-start: var(--space-xl);
+
+  & .tabs-buttons {
+    &.flow {
+      gap: var(--space-xs);
+    }
+
+    & button {
+      cursor: pointer;
+      padding: 0.75rem 1.25rem;
+      width: 100%;
+      line-height: var(--leading-tight);
+      background: color-mix(
+        in srgb,
+        var(--color-neutral-darker),
+        transparent 70%
+      );
+      color: color-mix(in srgb, var(--color-white), transparent 25%);
+      border: 0;
+      border-radius: var(--rounded-corners-small);
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: var(--color-white);
+        background: color-mix(
+          in srgb,
+          var(--color-neutral-darker),
+          transparent 85%
+        );
+      }
+
+      &.active {
+        color: var(--color-white);
+        font-weight: 700;
+        background: var(--color-background-gradient-primary);
+      }
+    }
+  }
+
+  & .tabs-content {
+    text-align: left;
+    background: var(--color-background-gradient-primary);
+    border-radius: var(--rounded-corners-small);
+    padding: var(--space-l);
+    color: var(--color-white);
+
+    & .text {
+      &.flow {
+        gap: var(--space-xs);
+      }
+
+      & h3 {
+        color: var(--color-white);
+      }
+    }
+
+    & a {
+      color: var(--color-white);
+    }
+  }
+
+  &.htmx-added .text {
+    animation: 0.4s ease fade-up;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -17,9 +17,21 @@ tabs:
               type: markdown
               localizable: true
       -
-        display: 'Preview Fields'
-        instructions: 'Shortened titles and descriptions for preview cards and areas.'
+        display: Preview
         fields:
+          -
+            handle: preview_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Preview Title'
+              instructions: "Short version of this entry's title that services as an id."
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             import: preview
             prefix: preview_
@@ -47,8 +59,8 @@ tabs:
             field:
               type: entries
               collections:
-                - benefits
+                - services
               max_items: 1
               listable: false
               localizable: true
-title: Benefit
+title: Service
