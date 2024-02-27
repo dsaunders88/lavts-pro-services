@@ -1,26 +1,54 @@
 <div class="tabs-wrapper">
-  <ul class="tabs-buttons | flow" role="tablist">
+  <ul
+    class="tabs-buttons | flow"
+    role="tablist"
+    aria-label="Format Capabilities"
+    @keydown.right.prevent.stop="$focus.wrap().next()"
+    @keydown.left.prevent.stop="$focus.wrap().prev()"
+    @keydown.home.prevent.stop="$focus.first()"
+    @keydown.page-up.prevent.stop="$focus.first()"
+    @keydown.end.prevent.stop="$focus.last()"
+    @keydown.page-down.prevent.stop="$focus.last()"
+  >
     {{ paramId = id }}
     {{ collection:services }}
       <li>
         <button
           hx-get="/capabilities/{{ preview_title | lower }}"
-          hx-swap="settle:400ms"
           role="tab"
+          id="tab-{{ preview_title | lower }}"
           class="{{ preview_title | lower == paramId ? 'active' : '' }}"
           aria-selected="{{ preview_title | lower == paramId ? 'true' : 'false' }}"
-          aria-controls="tab-content"
+          aria-controls="tab-content-{{ preview_title | lower }}"
+          tabindex="{{ preview_title | lower == paramId ? 0 : -1 }}"
         >
           {{ preview_title }}
         </button>
       </li>
     {{ /collection:services }}
   </ul>
-  <div id="tab-content" class="tabs-content" role="tabpanel">
+  <!-- Add tabindex="0" to tabpanel? Adds extra focusable element before embedded <a> -->
+  <div
+    id="tab-content-{{ currentTab.preview_title | lower }}"
+    class="tabs-content"
+    role="tabpanel"
+    aria-labelledby="tab-{{ currentTab.preview_title | lower }}"
+  >
     <div class="text | flow">
       <h3 class="heading">{{ currentTab.title }}</h3>
       <p class="description">{{ currentTab.preview_text_description }}</p>
       <a href="{{ currentTab.url }}">{{ currentTab.preview_link_text }}</a>
     </div>
+    {{ glide :src="currentTab.featured_image" preset="featured" }}
+      <img
+        class="bg-image"
+        src="{{ url }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        alt="{{ alt }}"
+        loading="lazy"
+        decoding="async"
+      />
+    {{ /glide }}
   </div>
 </div>

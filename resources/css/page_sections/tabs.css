@@ -44,6 +44,8 @@
   }
 
   & .tabs-content {
+    position: relative;
+    overflow: hidden;
     text-align: left;
     background: var(--color-background-gradient-primary);
     border-radius: var(--rounded-corners-small);
@@ -51,6 +53,10 @@
     color: var(--color-white);
 
     & .text {
+      position: relative;
+      z-index: 2;
+      padding-block-start: var(--space-3xl);
+
       &.flow {
         gap: var(--space-xs);
       }
@@ -63,10 +69,36 @@
     & a {
       color: var(--color-white);
     }
+
+    & .bg-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      mask-image: linear-gradient(to bottom, black 30%, transparent);
+      transition: 0.3s all ease;
+    }
+
+    &:hover .bg-image {
+      opacity: 0.85;
+    }
   }
 
-  &.htmx-added .text {
-    animation: 0.4s ease fade-up;
+  /* &.htmx-added .tabs-buttons .active {
+    animation: 0.3s ease fade-up;
+  } */
+
+  /* &.htmx-added .tabs-content .text {
+    animation: 0.5s ease fade-up;
+  } */
+  & .tabs-content .text {
+    animation: 0.7s ease fade-up;
+  }
+
+  & .tabs-content .bg-image {
+    animation: 1.7s ease zoom-out;
   }
 }
 
@@ -79,5 +111,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1.1);
+    filter: blur(0.5rem) brightness(0.5);
+  }
+
+  to {
+    transform: scale(1);
+    filter: blur(0) brightness(0.5);
   }
 }

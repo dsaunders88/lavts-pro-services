@@ -7,5 +7,6 @@ preview_icon: camera
 preview_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
 preview_link_text: 'Learn More'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1708997141
+updated_at: 1709057042
+featured_image: pexels-photo-242473.jpg
 ---
