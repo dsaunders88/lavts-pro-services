@@ -1,0 +1,37 @@
+<article class="team">
+  <div class="content-wrapper">
+    <div class="text | flow">
+      <div class="flow">
+        <header class="heading | text-gradient">
+          <div class="eyebrow small-title | text-faded">{{ team_title }}</div>
+          {{ team_heading_highlight }}
+        </header>
+        <p>{{ team_text_description }}</p>
+      </div>
+      <a href="{{ team_url }}" class="button-link primary">
+        {{ team_label }}
+      </a>
+    </div>
+    {{ glide :src="team_featured_image" preset="featured" }}
+      <img
+        class="featured-image"
+        src="{{ url }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        alt="{{ alt }}"
+        loading="lazy"
+      />
+    {{ /glide }}
+    {{ glide :src="presentation_background_image" preset="hero" }}
+      <img
+        class="bg-image"
+        src="{{ url }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        alt="{{ alt }}"
+        loading="lazy"
+        decoding="async"
+      />
+    {{ /glide }}
+  </div>
+</article>

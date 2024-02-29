@@ -1,0 +1,36 @@
+title: Feature
+fields:
+  -
+    handle: heading
+    field:
+      input_type: text
+      character_limit: 100
+      antlers: false
+      type: text
+      display: Heading
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: text_description
+    field: common.text_description
+  -
+    import: button
+  -
+    handle: featured_image
+    field:
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Featured Image'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

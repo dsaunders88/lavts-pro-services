@@ -1,10 +1,13 @@
 @import "../page_sections/hero.css";
 @import "../page_sections/benefits-preview";
 @import "../page_sections/tabs.css";
+@import "../page_sections/features.css";
+@import "../page_sections/team.css";
 @import "../page_sections/cta.css";
 
 main.home {
   margin-block-start: calc(var(--section-spacer) * 0.5);
+  overflow: hidden;
   /* margin-block-end: var(--section-spacer); */
 }
 
@@ -109,6 +112,7 @@ main.home {
   & .capabilities {
     --flow-space: var(--space-l);
     margin-block: var(--section-spacer);
+    margin-inline: -1rem;
     display: flex;
     justify-content: center;
     align-items: center;

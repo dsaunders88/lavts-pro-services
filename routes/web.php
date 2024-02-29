@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TabsController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ use App\Http\Controllers\TabsController;
 //    'title' => 'Example'
 // ]);
 Route::get('capabilities/{id}', [TabsController::class, 'show']);
+Route::get('products-test', [ProductsController::class, 'show']);

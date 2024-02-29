@@ -22,7 +22,7 @@ article:
 cta_heading: 'Ready to get started?'
 cta_description: 'Get personable and professional service for your next media transfer project.'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709006445
+updated_at: 1709239634
 hero_buttons:
   -
     id: lswgzyge
@@ -77,4 +77,61 @@ services:
   - services
 benefits:
   - benefits
+features:
+  -
+    id: lt7mojvc
+    feature_heading: 'Special handling cases'
+    feature_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+    feature_label: 'Our Processes'
+    feature_link_type: url
+    feature_target_blank: false
+    feature_url: /why-pro
+    feature_button_type: button
+    feature_featured_image:
+      - timothy-eberly-dtllhgeejwg-unsplash.jpg
+    type: new_feature
+    enabled: true
+    heading: 'Special handling cases'
+    text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+    label: 'Our Processes'
+    link_type: url
+    target_blank: false
+    url: /why-pro
+    button_type: button
+    featured_image:
+      - timothy-eberly-dtllhgeejwg-unsplash.jpg
+  -
+    id: lt7muvfc
+    feature_heading: 'Your questions answered'
+    feature_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+    feature_label: 'Read the FAQ'
+    feature_link_type: url
+    feature_target_blank: false
+    feature_url: /faq
+    feature_button_type: button
+    feature_featured_image:
+      - mink-mingle-hryjetl87gg-unsplash.jpg
+    type: new_feature
+    enabled: true
+    heading: 'Your questions answered'
+    text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+    label: 'See the FAQ'
+    link_type: url
+    target_blank: false
+    url: /faq
+    button_type: button
+    featured_image:
+      - mink-mingle-hryjetl87gg-unsplash.jpg
+team_title: 'Our Team'
+team_heading_highlight: '<h2>Trusted <strong>Experts</strong> for Your <strong>Media</strong> Projects</h2>'
+team_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
+team_label: 'Our Values'
+team_link_type: url
+team_target_blank: false
+team_url: /about-us
+team_button_type: button
+team_featured_image:
+  - team-cutout.png
+team_background_image:
+  - film-reel.png
 ---

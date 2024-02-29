@@ -18,7 +18,6 @@ fields:
       mode: toggle
       display: 'Show controls'
       type: revealer
-      icon: revealer
       width: 33
       listable: hidden
       instructions_position: above
@@ -103,22 +102,6 @@ fields:
         link_type: email
         show_controls: 'equals true'
   -
-    handle: tel
-    field:
-      placeholder: '+0 (0)12 345678'
-      input_type: tel
-      type: text
-      localizable: true
-      listable: false
-      display: Telephone
-      width: 50
-      replicator_preview: false
-      validate:
-        - 'required_if:{this}.link_type,tel'
-      if:
-        link_type: tel
-        show_controls: 'equals true'
-  -
     handle: sms
     field:
       placeholder: '+0 (0)12 345678'
@@ -133,19 +116,6 @@ fields:
         - 'required_if:{this}.link_type,sms'
       if:
         link_type: sms
-        show_controls: 'equals true'
-  -
-    handle: asset
-    field: common.image
-    config:
-      localizable: true
-      display: Asset
-      container: files
-      width: 50
-      validate:
-        - 'required_if:{this}.link_type,asset'
-      if:
-        link_type: asset
         show_controls: 'equals true'
   -
     handle: button_type

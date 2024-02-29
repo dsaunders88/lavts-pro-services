@@ -104,6 +104,41 @@ tabs:
               replicator_preview: true
               hide_display: false
       -
+        display: Features
+        fields:
+          -
+            handle: features
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_feature:
+                      display: 'New Feature'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: feature
+              type: replicator
+              display: Features
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Team
+        fields:
+          -
+            import: team
+            prefix: team_
+      -
         display: 'Call to Action'
         fields:
           -

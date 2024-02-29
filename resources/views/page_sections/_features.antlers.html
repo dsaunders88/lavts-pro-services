@@ -1,0 +1,25 @@
+<section class="features | content-wrapper">
+  {{ features }}
+    <article>
+      <div class="image">
+        {{ glide :src="featured_image" preset="featured" }}
+          <img
+            src="{{ url }}"
+            width="{{ width }}"
+            height="{{ height }}"
+            alt="{{ alt }}"
+            loading="lazy"
+          />
+        {{ /glide }}
+        <div class="underlay"></div>
+      </div>
+      <div class="text | flow">
+        <header class="flow">
+          <h2>{{ heading }}</h2>
+          <p>{{ text_description }}</p>
+        </header>
+        {{ partial:components/button_link }}
+      </div>
+    </article>
+  {{ /features }}
+</section>
