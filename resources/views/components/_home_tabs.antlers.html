@@ -43,9 +43,11 @@
     {{# {{ currentTab.featured_image.url }} #}}
     <img
       class="bg-image"
-      src="{{ glide :src="currentTab.featured_image.url" preset="featured" }}"
+      src="{{ glide :src="currentTab.featured_image" preset="featured" }}"
       alt="{{ currentTab.featured_image.alt or '' }}"
       width="1000"
+      loading="lazy"
+      decoding="async"
     />
   </div>
 </div>
