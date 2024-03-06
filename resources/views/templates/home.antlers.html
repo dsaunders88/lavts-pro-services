@@ -36,17 +36,19 @@
             </ul>
           {{ /if }}
         </div>
-        {{ glide :src="presentation_image" preset="featured" }}
-          <img
-            class="featured-img"
-            src="{{ url }}"
-            width="{{ width }}"
-            height="{{ hegith }}"
-            alt="{{ alt }}"
-            loading="lazy"
-            decoding="async"
-          />
-        {{ /glide }}
+        {{ if presentation_image }}
+          {{ glide :src="presentation_image" preset="featured" }}
+            <img
+              class="featured-img"
+              src="{{ url }}"
+              width="{{ width }}"
+              height="{{ hegith }}"
+              alt="{{ alt }}"
+              loading="lazy"
+              decoding="async"
+            />
+          {{ /glide }}
+        {{ /if }}
       </div>
     </div>
     {{ if presentation_background_image }}
