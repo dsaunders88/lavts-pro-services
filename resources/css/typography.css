@@ -103,7 +103,7 @@ a:not(.button-link, .logo):hover {
       var(--color-primary-base) 90%,
       var(--color-neutral-darkest)
     );
-    --link-border: var(--color-primary-light);
+    --link-border: var(--color-primary-base);
     --link-border-hover: var(--color-primary-bright);
   }
 

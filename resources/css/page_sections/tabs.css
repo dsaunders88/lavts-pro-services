@@ -101,27 +101,3 @@
     animation: 1.7s ease zoom-out;
   }
 }
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(0.5rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoom-out {
-  from {
-    transform: scale(1.1);
-    filter: blur(0.5rem) brightness(0.5);
-  }
-
-  to {
-    transform: scale(1);
-    filter: blur(0) brightness(0.5);
-  }
-}

@@ -1,15 +1,33 @@
 .hero {
+  position: relative;
   --flow-space: var(--space-l);
   align-items: center;
   text-align: center;
+  padding-block-start: calc(var(--section-spacer) * 1.5);
+  padding-block-end: calc(var(--section-spacer) * 1.75);
+  color: var(--color-white);
 
   & .heading {
     font-size: var(--step-5);
+  }
+
+  & :is(.heading, h1) {
+    color: var(--color-white);
   }
 
   & .links {
     &.cluster {
       --cluster-justify: center;
     }
+  }
+
+  & .bg-image {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    filter: brightness(0.3);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }

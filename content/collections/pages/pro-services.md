@@ -22,7 +22,7 @@ article:
 cta_heading: 'Ready to get started?'
 cta_description: 'Get personable and professional service for your next media transfer project.'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709239634
+updated_at: 1709768027
 hero_buttons:
   -
     id: lswgzyge
@@ -47,9 +47,7 @@ cta_buttons:
     url: /estimate
     button_type: button
 template: templates/home
-hero_heading_highlight: |-
-  <h1><strong>Elevate</strong> Your Media
-  with <strong>Precision</strong> Transfers</h1>
+hero_heading_highlight: '<h1><strong>Premium</strong> Transfer &amp; Duplication <strong>Services</strong></h1>'
 presentation_heading_highlight: '<h2>What Are <strong>Pro</strong> Services?</h2>'
 presentation_text_plain: 'Our Los Angeles-based Pro Services offer personalized, high-quality solutions for industry-focused requests. Let our dedicated team prepare your media collection for professional or archival use.'
 presentation_list:
@@ -59,8 +57,8 @@ presentation_list:
   - Nonprofits
   - Museums
   - 'and more'
-presentation_image: presentation-group.png
-benefits_heading_highlight: '<h2><strong>Benefits</strong> of <br>Pro Transfer <strong>Solutions</strong></h2>'
+presentation_image: vhs-deck.jpg
+benefits_heading_highlight: '<h2>Our<strong> Solutions</strong></h2>'
 cta_background_image: film-bg.jpg
 presentation_background_image: film-reel.png
 presentation_section_title: About

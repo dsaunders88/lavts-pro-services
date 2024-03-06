@@ -4,7 +4,11 @@
     @param eyebrow The above heading.
 #}}
 
-<article class="hero">
+<article
+  class="hero"
+  x-intersect:enter.half="scrolled = false"
+  x-intersect:leave.half="scrolled = true"
+>
   <div class="text-wrapper | flow">
     <header class="heading | text-gradient">
       {{ if eyebrow }}
@@ -16,8 +20,14 @@
  | widont }}</p>
     <div class="links | cluster">
       {{ hero_buttons }}
-        {{ partial:components/button_link style="{{index === 0 ? "primary" : "ghost-primary"}}" }}
+        {{ partial:components/button_link style="{{index === 0 ? "primary" : "ghost"}}" }}
       {{ /hero_buttons }}
     </div>
   </div>
+  <img
+    class="bg-image"
+    src="{{ glide src="https://images.unsplash.com/photo-1505775561242-727b7fba20f0" width="1920" quality="80" }}"
+    alt=""
+    width="1920"
+  />
 </article>

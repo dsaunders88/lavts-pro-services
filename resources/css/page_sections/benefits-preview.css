@@ -1,55 +1,151 @@
-@import "preview-card";
-
-.benefits-preview {
-  margin-block: var(--section-spacer);
-
+.benefits {
   & h2 {
     text-align: center;
     margin-block-end: var(--space-2xl);
+    font-size: var(--step-4);
   }
 
-  & .grid {
-    --column-gap: var(--space-xl);
-    --row-gap: var(--space-2xl);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: var(--column-gap);
-    row-gap: var(--row-gap);
-    position: relative;
+  & .slider {
+    margin-block-start: var(--space-2xl);
+  }
 
-    & .rules {
+  & article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    color: var(--color-white);
+    padding: var(--space-l);
+    min-height: 32rem;
+    background: linear-gradient(
+      to bottom right,
+      var(--color-primary-base) -30%,
+      var(--color-neutral-darkest) 40%
+    );
+    border-radius: var(--rounded-corners);
+    overflow: hidden;
+    outline: 0px solid transparent;
+    transition: all 0.2s linear;
+
+    &:hover {
+      outline: 5px solid var(--color-primary-base);
+
+      /* & .overlay {
+        opacity: 0.55;
+      } */
+    }
+
+    & .text {
+      position: relative;
+      z-index: 3;
+    }
+
+    & .heading {
+      & a {
+        font-weight: var(--font-heading-weight);
+        text-decoration: none;
+        color: var(--color-white);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & footer {
+      &.cluster {
+        --cluster-space: 0.5rem;
+      }
+
+      & svg {
+        position: relative;
+        top: 1px;
+        opacity: 0;
+        transform: translateX(-1px);
+        transition:
+          transform 0.4s ease,
+          opacity 0.3s ease;
+      }
+
+      & a {
+        color: var(--color-white);
+        opacity: 0.7;
+
+        &:hover {
+          color: var(--color-white);
+          opacity: 1;
+        }
+
+        &:hover + svg {
+          opacity: 1;
+          transform: translateX(1px);
+        }
+      }
+    }
+
+    & .overlay {
       position: absolute;
       inset: 0;
+      z-index: 1;
       height: 100%;
       width: 100%;
-      z-index: -1;
+      opacity: 0;
+      background: var(--color-background-gradient-primary);
+      transition: all 0.4s ease-in-out;
+    }
 
-      & > :is(:nth-child(1), :nth-child(2)) {
-        position: absolute;
-        height: 100%;
-        width: 1px;
-        background-color: var(--color-primary-light);
-        mask-image: linear-gradient(to bottom, transparent, black, transparent);
+    & img {
+      position: absolute;
+      top: -12rem;
+      left: 0;
+      z-index: 2;
+      opacity: 0.2;
+      width: 60%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  & .splide {
+    & .splide__track {
+      overflow: visible;
+    }
+
+    & .splide__list {
+      & li:nth-child(even) {
+        & .overlay {
+          opacity: 0.75;
+        }
       }
+    }
 
-      & > :nth-child(1) {
-        left: calc(33.3% - 9px);
-        transform: translateX(-50%);
+    & .splide__arrows {
+      display: flex;
+      position: relative;
+      margin-inline: auto;
+      justify-content: center;
+      gap: 1rem;
+      top: -1.5rem;
+
+      & .splide__arrow {
+        position: static;
+        background: var(--color-background-gradient-primary);
+
+        & svg {
+          fill: var(--color-primary-light);
+        }
       }
+    }
 
-      & > :nth-child(2) {
-        left: calc(66.6% + 9px);
-        transform: translateX(50%);
-      }
+    & .splide__pagination {
+      bottom: -2rem;
+    }
 
-      & > :nth-child(3) {
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: var(--color-primary-light);
-        mask-image: linear-gradient(to right, transparent, black, transparent);
+    & .splide__pagination__page {
+      background: var(--color-primary-light);
+
+      &.is-active {
+        background: var(--color-background-gradient-primary);
       }
     }
   }

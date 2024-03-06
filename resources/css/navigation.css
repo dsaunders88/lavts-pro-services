@@ -5,6 +5,8 @@
   color: var(--color-white);
   line-height: 24px;
   font-size: 17px;
+  position: relative;
+  z-index: 50;
 
   & a {
     color: var(--color-white);
@@ -40,18 +42,55 @@
 }
 
 .site-header {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  padding-block: 2rem;
-  align-items: center;
-  justify-items: center;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-regular);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  font-size: var(--step-0);
+  transition: all 0.3s ease;
+  /* backdrop-filter: blur(0.5rem); */
 
-  & > :first-child {
-    justify-self: start;
+  &.scrolled {
+    & .content-wrapper {
+      grid-template-columns: 200px 1fr;
+      padding-block: 1rem;
+    }
+
+    & .main-nav {
+      & .nav-link {
+        font-size: 16px;
+      }
+    }
+
+    & .popover {
+      & .panel {
+        font-size: 16px;
+      }
+    }
   }
 
-  & > :last-child {
-    justify-self: end;
+  & .content-wrapper {
+    --cluster-space: 1.25rem;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    padding-block: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    transition: all 0.3s ease-in-out;
+
+    & > :first-child {
+      justify-self: start;
+    }
+
+    & > :last-child {
+      justify-self: end;
+    }
+
+    & > .cluster {
+      column-gap: calc(var(--cluster-space) + 0.75rem);
+      row-gap: 0.5rem;
+    }
   }
 
   & .logo {
@@ -66,7 +105,8 @@
 
   & .main-nav {
     & .cluster {
-      --cluster-space: 1.25rem;
+      column-gap: var(--cluster-space);
+      row-gap: 0.5rem;
     }
 
     & .nav-link {
@@ -77,10 +117,15 @@
       text-decoration: none;
       border-radius: var(--rounded-corners-small);
       padding: 0.25rem 0.5rem;
-      font-size: 17px;
+      background: none;
+      font-weight: 500;
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      transition: all 0.2s ease;
 
       & svg {
-        color: var(--color-primary-base);
+        fill: var(--color-primary-base);
       }
 
       &:hover {
@@ -88,6 +133,90 @@
 
         & svg {
           color: var(--color-primary-bright);
+        }
+      }
+    }
+  }
+
+  & .popover {
+    position: relative;
+
+    & button {
+      &.active {
+        color: var(--color-primary-base);
+      }
+    }
+
+    & .panel-wrapper {
+      position: absolute;
+    }
+
+    & .panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xs);
+      /* left: 50%;
+      transform: translateX(-50%); */
+      border-radius: var(--rounded-corners-small);
+      box-shadow: var(--shadow-regular);
+      background-color: var(--color-white);
+      margin-block-start: 1rem;
+      min-width: 36rem;
+      overflow: hidden;
+      animation: fade-up 0.2s ease-in;
+
+      & .feature {
+        position: relative;
+        overflow: hidden;
+        padding: var(--space-m);
+        background: var(--color-background-gradient-primary);
+        color: var(--color-white);
+
+        & .text {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          gap: 1.5rem;
+          width: 100%;
+          height: 100%;
+        }
+
+        & img {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          filter: grayscale(0);
+          mix-blend-mode: multiply;
+          opacity: 0.2;
+        }
+      }
+
+      & .links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: var(--space-m);
+
+        & a {
+          font-size: 1em;
+          padding: 0.25rem 0.5rem;
+          display: inline-block;
+          border-radius: var(--rounded-corners-small);
+          color: var(--color-text-body);
+          text-decoration: none;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--color-primary-base);
+            text-decoration: underline;
+            /* background-color: var(--color-neutral-light); */
+          }
         }
       }
     }

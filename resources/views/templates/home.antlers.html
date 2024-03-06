@@ -6,6 +6,11 @@
 
 {{ push:styles }}
   {{ vite src="resources/css/templates/home.css" }}
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
 {{ /push:styles }}
 <main class="home" id="content">
   {{ partial:page_sections/hero eyebrow="{{title}}" }}
@@ -58,6 +63,10 @@
       {{ /glide }}
     {{ /if }}
   </article>
+  {{ partial:page_sections/benefits_preview }}
+  {{ partial:page_sections/capabilities }}
+  {{ partial:page_sections/features }}
+  {{ partial:page_sections/team }}
   <div class="clients | content-wrapper | flow">
     <h2 class="small-title | text-center">
       {{ clients_section_title }}
@@ -70,9 +79,5 @@
       {{ /glide }}
     </ul>
   </div>
-  {{ partial:page_sections/benefits_preview }}
-  {{ partial:page_sections/capabilities }}
-  {{ partial:page_sections/features }}
-  {{ partial:page_sections/team }}
   {{ partial:page_sections/cta }}
 </main>

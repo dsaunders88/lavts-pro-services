@@ -98,7 +98,7 @@
   --paragraph-measure: 62ch;
   --section-spacer: var(--space-3xl);
   --main-top-spacer: 10rem;
-  --shadow-regular: 0 -3px 28px -3px rgb(43 0 43 / 18%);
+  --shadow-regular: 0 0 32px 0 rgba(36, 41, 43, 0.15);
   --shadow-light: 0 -3px 28px -3px rgb(43 0 43 / 8%);
   --accent-line-width: 4px;
   --text-opacity-shade: 0.75;

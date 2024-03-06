@@ -1,18 +1,43 @@
-<div class="grid">
-  {{ grid_entries }}
-    <article class="preview-card | flow">
-      <i class="fa-duotone fa-{{ preview_icon or 'photo-film' }} fa-xl"></i>
-      <h3>{{ title }}</h3>
-      <p>{{ preview_text_description }}</p>
-      <footer class="cluster">
-        <a href="{{ url }}">{{ preview_link_text }}</a>
-        <i class="fa-solid fa-chevron-right fa-2xs"></i>
-      </footer>
-    </article>
-  {{ /grid_entries }}
-  <div class="rules">
-    <div aria-hidden="true"></div>
-    <div aria-hidden="true"></div>
-    <div aria-hidden="true"></div>
+<div
+  class="slider"
+  x-data="{
+  init() {
+    new Splide(this.$refs.splide, {
+      perPage: 3,
+      perMove: 1,
+      gap: '2rem'
+    }).mount()
+  }
+}"
+>
+  <div x-ref="splide" class="splide" aria-label="Pro Services Benefits">
+    <div class="splide__track">
+      <ul role="list" class="splide__list">
+        {{ grid_entries }}
+          <li class="splide__slide">
+            <article class="preview-card">
+              {{# <i class="fa-duotone fa-{{ preview_icon or 'photo-film' }} fa-xl"></i> #}}
+              <div class="text | flow">
+                <h3 class="heading"><a href="{{ url }}">{{ title }}</a></h3>
+                <p>{{ preview_text_description }}</p>
+                <footer class="cluster">
+                  <a href="{{ url }}">{{ preview_link_text }}</a>
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                </footer>
+              </div>
+              <img src="/images/data-bg.png" alt="" />
+              <div class="overlay"></div>
+            </article>
+          </li>
+        {{ /grid_entries }}
+      </ul>
+      {{#
+        <div class="rules">
+          <div aria-hidden="true"></div>
+          <div aria-hidden="true"></div>
+          <div aria-hidden="true"></div>
+        </div>
+      #}}
+    </div>
   </div>
 </div>

@@ -43,7 +43,7 @@
     }
 
     & .image {
-      --underlay-offset: 2rem;
+      --underlay-offset: 1rem;
       position: relative;
     }
 

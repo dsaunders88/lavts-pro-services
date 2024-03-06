@@ -97,13 +97,34 @@
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
       crossorigin="anonymous"
     ></script>
+    <!-- Alpine -->
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/ui@3.13.6-beta.0/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.13.6/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/anchor@3.13.6/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/focus@3.13.6/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.13.6/dist/cdn.min.js"
+    ></script>
     <!-- Font Awesome Icons -->
     <script defer src="/fontawesome/brands.min.js"></script>
     <script defer src="/fontawesome/duotone.min.js"></script>
     <script defer src="/fontawesome/solid.min.js"></script>
     <script defer src="/fontawesome/fontawesome.min.js"></script>
   </head>
-  <body>
+  <body x-data="{ scrolled: false }">
     {{ stack:seo_body }}
     {{ partial:statamic-peak-tools::snippets/noscript }}
     {{ partial:statamic-peak-tools::navigation/skip_to_content }}

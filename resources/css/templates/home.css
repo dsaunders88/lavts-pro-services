@@ -6,7 +6,7 @@
 @import "../page_sections/cta.css";
 
 main.home {
-  margin-block-start: calc(var(--section-spacer) * 0.5);
+  /* margin-block-start: calc(var(--section-spacer) * 0.5); */
   overflow: hidden;
   /* margin-block-end: var(--section-spacer); */
 }
@@ -21,8 +21,13 @@ main.home {
   & .about-presentation {
     position: relative;
     background-color: var(--color-neutral-light);
-    margin-block: var(--section-spacer);
+    margin-block-end: var(--section-spacer);
     padding-block: var(--section-spacer);
+    top: -3rem;
+    width: calc(100% - var(--space-3xl));
+    border-radius: var(--rounded-corners);
+    margin-inline: auto;
+    overflow: hidden;
 
     & .content-wrapper {
       z-index: 2;
@@ -36,6 +41,7 @@ main.home {
 
     & .has-sidebar {
       --main-min-width: 45%;
+      --sidebar-gap: var(--space-2xl);
       align-items: center;
 
       & > .flow {
@@ -44,7 +50,12 @@ main.home {
     }
 
     & .featured-img {
-      width: 30rem;
+      width: 35rem;
+      border-radius: var(--rounded-corners);
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-regular);
     }
 
     & ul {
