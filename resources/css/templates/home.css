@@ -24,13 +24,13 @@ main.home {
     margin-block-end: var(--section-spacer);
     padding-block: var(--section-spacer);
     top: -3rem;
-    width: calc(100% - var(--space-3xl));
+    width: calc(100% - var(--space-xl));
     border-radius: var(--rounded-corners);
     margin-inline: auto;
     overflow: hidden;
 
     & .content-wrapper {
-      z-index: 2;
+      z-index: 3;
     }
 
     & header {
@@ -72,6 +72,7 @@ main.home {
 
     & .bg-image {
       position: absolute;
+      z-index: 1;
       inset: 0;
       width: 100%;
       height: 100%;
@@ -79,6 +80,19 @@ main.home {
       mix-blend-mode: color-burn;
       opacity: 0.3;
       object-fit: cover;
+    }
+
+    & .overlay {
+      position: absolute;
+      z-index: 0;
+      background-color: var(--color-primary-base);
+      right: -15%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      transform: skew(-20deg);
+      box-shadow: inset 0 0 1rem
+        color-mix(in srgb, var(--color-primary-dark), black 10%);
     }
   }
 
@@ -131,8 +145,8 @@ main.home {
 
     & .content-wrapper {
       width: 100%;
-      background: var(--color-background-gradient-dark);
-      padding-block: calc(var(--section-spacer) * 0.75);
+      background: var(--color-neutral-darkest);
+      padding-block: calc(var(--section-spacer) * 1);
       border-radius: var(--rounded-corners);
       overflow: hidden;
 

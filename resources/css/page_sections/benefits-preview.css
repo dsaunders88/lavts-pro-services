@@ -1,12 +1,16 @@
 .benefits {
   & h2 {
-    text-align: center;
-    margin-block-end: var(--space-2xl);
     font-size: var(--step-4);
   }
 
+  & .text {
+    & p {
+      max-width: var(--paragraph-measure-shorter);
+    }
+  }
+
   & .slider {
-    margin-block-start: var(--space-2xl);
+    margin-block-start: var(--space-xl);
   }
 
   & article {
@@ -35,12 +39,24 @@
       } */
     }
 
+    & > svg {
+      color: var(--color-primary-light);
+      position: relative;
+      z-index: 3;
+      height: 2rem;
+      place-self: flex-start;
+      margin-block-end: var(--space-s);
+    }
+
     & .text {
       position: relative;
       z-index: 3;
     }
 
     & .heading {
+      font-size: var(--step-3);
+      text-wrap: balance;
+
       & a {
         font-weight: var(--font-heading-weight);
         text-decoration: none;
@@ -121,24 +137,56 @@
 
     & .splide__arrows {
       display: flex;
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: calc(var(--space-2xl) * -1 - 0.25rem);
       margin-inline: auto;
       justify-content: center;
       gap: 1rem;
-      top: -1.5rem;
 
       & .splide__arrow {
         position: static;
-        background: var(--color-background-gradient-primary);
+        background: transparent;
+        width: fit-content;
+        border: 1px solid var(--color-primary-base);
+        border-radius: var(--rounded-corners-small);
+        padding: 1.25rem;
+        opacity: 1;
+        color: var(--color-primary-dark);
 
         & svg {
+          transform: translateX(0);
           fill: var(--color-primary-light);
+        }
+
+        &:disabled {
+          opacity: 0.3;
+        }
+
+        &:hover {
+          background-color: color-mix(
+            in srgb,
+            var(--color-primary-light),
+            transparent 70%
+          );
+        }
+
+        &.splide__arrow--prev:hover {
+          & svg {
+            transform: translateX(-2px);
+          }
+        }
+
+        &.splide__arrow--next:hover {
+          & svg {
+            transform: translateX(2px);
+          }
         }
       }
     }
 
     & .splide__pagination {
-      bottom: -2rem;
+      bottom: calc(var(--space-xl) * -1);
     }
 
     & .splide__pagination__page {

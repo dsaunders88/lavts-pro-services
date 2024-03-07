@@ -96,6 +96,7 @@
   --rounded-corners: 0.5rem;
   --rounded-corners-small: 0.25rem;
   --paragraph-measure: 62ch;
+  --paragraph-measure-shorter: 55ch;
   --section-spacer: var(--space-3xl);
   --main-top-spacer: 10rem;
   --shadow-regular: 0 0 32px 0 rgba(36, 41, 43, 0.15);

@@ -16,10 +16,10 @@
       </div>
       <div class="text | flow">
         <header class="flow">
-          <h2>{{ heading }}</h2>
+          <h2>{{ heading | title }}</h2>
           <p>{{ text_description }}</p>
         </header>
-        {{ partial:components/button_link }}
+        {{ partial:components/button_link withArrow="true" }}
       </div>
     </article>
   {{ /features }}

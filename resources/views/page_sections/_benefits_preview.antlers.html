@@ -1,8 +1,11 @@
 <div class="content-wrapper">
   <article class="benefits">
-    <header class="heading | text-gradient">
-      {{ benefits_heading_highlight }}
-    </header>
+    <div class="text | flow">
+      <header class="heading | text-gradient">
+        {{ benefits_heading_highlight }}
+      </header>
+      <p>{{ benefits_text_description }}</p>
+    </div>
     {{ collection from="{benefits}" as="grid_entries" }}
       {{ partial:components/preview_grid }}
     {{ /collection }}

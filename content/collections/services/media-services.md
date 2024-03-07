@@ -1,12 +1,12 @@
 ---
-id: ec3dcf2d-30b5-4bb2-a49e-c497e191eae6
+id: c0ba6a77-f713-4fae-a718-687f47aab24b
 blueprint: service
-title: 'Audio Conversion Pro Services'
-preview_title: 'Audio Conversion'
-preview_icon: headphones
+title: 'Media Services'
+featured_image: film-bg.jpg
+preview_title: 'More Services'
 preview_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
 preview_link_text: 'Learn More'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709851484
-featured_image: audio-cassette-deck.jpg
+updated_at: 1709851548
 ---
+anything

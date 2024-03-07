@@ -71,6 +71,9 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: benefits_text_description
+            field: common.text_description
       -
         display: Capabilities
         fields:

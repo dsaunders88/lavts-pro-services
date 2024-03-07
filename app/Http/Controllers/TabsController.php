@@ -13,7 +13,7 @@ class TabsController extends Controller
             'id' => $id,
             'currentTab' => Entry::query()
                 ->where('collection', 'services')
-                ->where('preview_title', $id)
+                ->where('slug', $id)
                 ->first()
         ]);
     }

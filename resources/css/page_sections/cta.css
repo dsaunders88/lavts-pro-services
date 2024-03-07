@@ -1,6 +1,10 @@
 .cta {
   position: relative;
-  background: var(--color-background-gradient-primary);
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary-base) -30%,
+    var(--color-neutral-darkest) 70%
+  );
   color: var(--color-white);
   padding-block: calc(var(--section-spacer) * 1.25);
   text-align: center;

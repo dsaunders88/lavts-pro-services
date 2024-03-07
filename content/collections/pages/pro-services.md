@@ -20,9 +20,9 @@ article:
         type: text
         text: 'lorem ipsum'
 cta_heading: 'Ready to get started?'
-cta_description: 'Get personable and professional service for your next media transfer project.'
+cta_description: 'Get personable and professional service from Los Angeles Video Transfer Service for your next media transfer project.'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709768027
+updated_at: 1709852994
 hero_buttons:
   -
     id: lswgzyge
@@ -58,7 +58,7 @@ presentation_list:
   - Museums
   - 'and more'
 presentation_image: vhs-deck.jpg
-benefits_heading_highlight: '<h2>Our<strong> Solutions</strong></h2>'
+benefits_heading_highlight: '<h2>Uniquely<strong> Qualified</strong></h2>'
 cta_background_image: film-bg.jpg
 presentation_background_image: film-reel.png
 presentation_section_title: About
@@ -69,7 +69,7 @@ clients_logos:
   - logos/sony-logo.svg
   - logos/ucla-library-logo.svg
 capabilities_section_title: 'Format Capabilities'
-capabilities_heading_highlight: '<h2>Tailored <strong>Solutions</strong> for <br><strong>Any</strong> Media Type</h2>'
+capabilities_heading_highlight: '<h2>Transfer <strong>Solutions</strong> for <br><strong>Any</strong> Media Type</h2>'
 capabilities_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
 services:
   - services
@@ -89,7 +89,7 @@ features:
       - timothy-eberly-dtllhgeejwg-unsplash.jpg
     type: new_feature
     enabled: true
-    heading: 'Special handling cases'
+    heading: 'Equipped for any job'
     text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
     label: 'Our Processes'
     link_type: url
@@ -97,7 +97,7 @@ features:
     url: /why-pro
     button_type: button
     featured_image:
-      - timothy-eberly-dtllhgeejwg-unsplash.jpg
+      - u-matic-deck.jpg
   -
     id: lt7muvfc
     feature_heading: 'Your questions answered'
@@ -112,14 +112,14 @@ features:
     type: new_feature
     enabled: true
     heading: 'Your questions answered'
-    text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+    text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, lorem ipsum dolor sit amet.'
     label: 'See the FAQ'
     link_type: url
     target_blank: false
     url: /faq
     button_type: button
     featured_image:
-      - mink-mingle-hryjetl87gg-unsplash.jpg
+      - audio-cassette-deck.jpg
 team_title: 'Our Team'
 team_heading_highlight: '<h2>Trusted <strong>Experts</strong> for Your <strong>Media</strong> Projects</h2>'
 team_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
@@ -132,4 +132,5 @@ team_featured_image:
   - team-cutout.png
 team_background_image:
   - film-reel.png
+benefits_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
 ---

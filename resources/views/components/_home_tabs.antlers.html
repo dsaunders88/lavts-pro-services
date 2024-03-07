@@ -14,14 +14,15 @@
     {{ collection:services }}
       <li>
         <button
-          hx-get="/capabilities/{{ preview_title | lower }}"
+          hx-get="/capabilities/{{ slug | lower }}"
           role="tab"
-          id="tab-{{ preview_title | lower }}"
-          class="{{ preview_title | lower == paramId ? 'active' : '' }}"
-          aria-selected="{{ preview_title | lower == paramId ? 'true' : 'false' }}"
-          aria-controls="tab-content-{{ preview_title | lower }}"
-          tabindex="{{ preview_title | lower == paramId ? 0 : -1 }}"
+          id="tab-{{ slug | lower }}"
+          class="{{ slug | lower == paramId ? 'active' : '' }}"
+          aria-selected="{{ slug | lower == paramId ? 'true' : 'false' }}"
+          aria-controls="tab-content-{{ slug | lower }}"
+          tabindex="{{ slug | lower == paramId ? 0 : -1 }}"
         >
+          <i class="fa-solid fa-circle-plus fa-xs"></i>
           {{ preview_title }}
         </button>
       </li>
@@ -29,13 +30,15 @@
   </ul>
   <!-- Add tabindex="0" to tabpanel? Adds extra focusable element before embedded <a> -->
   <div
-    id="tab-content-{{ currentTab.preview_title | lower }}"
+    id="tab-content-{{ currentTab.slug | lower }}"
     class="tabs-content"
     role="tabpanel"
-    aria-labelledby="tab-{{ currentTab.preview_title | lower }}"
+    aria-labelledby="tab-{{ currentTab.slug | lower }}"
   >
     <div class="text | flow">
-      <h3 class="heading">{{ currentTab.title }}</h3>
+      <h3 class="heading">
+        <a href="{{ currentTab.url }}">{{ currentTab.title }}</a>
+      </h3>
       <p class="description">{{ currentTab.preview_text_description }}</p>
       <a href="{{ currentTab.url }}">{{ currentTab.preview_link_text }}</a>
     </div>

@@ -2,7 +2,7 @@
   margin-block: var(--section-spacer);
 
   & > * + * {
-    margin-block-start: var(--space-2xl);
+    margin-block-start: var(--space-3xl);
   }
 
   & article {
@@ -33,6 +33,10 @@
     & .text {
       &.flow {
         gap: var(--space-l);
+      }
+
+      & p {
+        max-width: var(--paragraph-measure-shorter);
       }
     }
 
