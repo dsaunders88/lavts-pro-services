@@ -1,0 +1,14 @@
+@import "../page_sections/hero";
+
+.estimate {
+  & .hero {
+    --hero-padding: calc(var(--section-spacer) * 0.5);
+
+    & p {
+      font-size: var(--step-1);
+      max-width: var(--paragraph-measure);
+      text-wrap: balance;
+      margin-inline: auto;
+    }
+  }
+}

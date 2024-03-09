@@ -1,9 +1,9 @@
-@import "../page_sections/hero.css";
+@import "../page_sections/hero";
 @import "../page_sections/benefits-preview";
-@import "../page_sections/tabs.css";
-@import "../page_sections/features.css";
-@import "../page_sections/team.css";
-@import "../page_sections/cta.css";
+@import "../page_sections/tabs";
+@import "../page_sections/features";
+@import "../page_sections/team";
+@import "../page_sections/cta";
 
 main.home {
   /* margin-block-start: calc(var(--section-spacer) * 0.5); */
@@ -13,13 +13,16 @@ main.home {
 
 .home {
   & .hero {
-    & h1 {
-      font-size: var(--step-5);
+    --hero-color-text: var(--color-white);
+
+    & .bg-image {
+      filter: brightness(0.3);
     }
   }
 
   & .about-presentation {
     position: relative;
+    z-index: 4;
     background-color: var(--color-neutral-light);
     margin-block-end: var(--section-spacer);
     padding-block: var(--section-spacer);
@@ -85,7 +88,11 @@ main.home {
     & .overlay {
       position: absolute;
       z-index: 0;
-      background-color: var(--color-primary-base);
+      background: linear-gradient(
+        to bottom right,
+        color-mix(in srgb, var(--color-primary-bright), white 3%),
+        color-mix(in srgb, var(--color-primary-base), white 6%)
+      );
       right: -15%;
       top: 0;
       width: 50%;

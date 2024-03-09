@@ -1,0 +1,27 @@
+@import "../page_sections/hero";
+@import "../page_sections/features";
+@import "../page_sections/formats";
+@import "../page_sections/cta";
+
+.interior {
+  & .hero {
+    --hero-color-text: var(--color-white);
+    --hero-heading-size: var(--step-4);
+    --hero-padding: calc(var(--section-spacer) * 0.5);
+    --hero-color-bg: linear-gradient(
+      to bottom right,
+      var(--color-primary-base) -40%,
+      var(--color-neutral-darkest) 30%
+    );
+
+    & .eyebrow {
+      color: var(--color-primary-bright);
+    }
+
+    & .bg-image {
+      filter: grayscale(1);
+      mix-blend-mode: multiply;
+      opacity: 0.4;
+    }
+  }
+}

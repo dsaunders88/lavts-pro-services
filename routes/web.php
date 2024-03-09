@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TabsController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\FormatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ use App\Http\Controllers\ProductsController;
 // ]);
 Route::get('capabilities/{id}', [TabsController::class, 'show']);
 Route::get('products-test', [ProductsController::class, 'show']);
+Route::get('formats/{productId}', [FormatsController::class, 'show']);

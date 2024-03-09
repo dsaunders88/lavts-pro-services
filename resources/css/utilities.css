@@ -111,6 +111,10 @@
   text-wrap: pretty;
 }
 
+.text-paragraph-measure {
+  max-width: var(--paragraph-measure);
+}
+
 .text-italic {
   font-style: italic;
 }

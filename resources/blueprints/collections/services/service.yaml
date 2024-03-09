@@ -3,6 +3,7 @@ tabs:
     display: Main
     sections:
       -
+        display: Core
         fields:
           -
             handle: title
@@ -33,6 +34,17 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: woocommerce_product_id
+            field:
+              type: integer
+              display: 'WooCommerce Product Id'
+              instructions: 'The four-digit product id in the WooCommerce database, to look up format types.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
       -
         display: Preview
         fields:
@@ -52,6 +64,74 @@ tabs:
           -
             import: preview
             prefix: preview_
+      -
+        display: Features
+        fields:
+          -
+            handle: features
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_feature:
+                      display: 'New Feature'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: feature
+              type: replicator
+              display: Features
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Formats
+        fields:
+          -
+            handle: formats_heading_highlight
+            field: common.heading_highlight
+          -
+            handle: formats_text_description
+            field: common.text_description
+      -
+        display: FAQs
+        fields:
+          -
+            handle: faqs
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_faq:
+                      display: 'New FAQ'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: faq
+                          prefix: faq_
+              type: replicator
+              display: FAQs
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   seo:
     display: SEO
     sections:

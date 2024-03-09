@@ -1,0 +1,33 @@
+{{#
+  @name Interior Hero Section
+  @desc Hero page section for interior pages.
+    @param eyebrow The above heading.
+#}}
+
+{{#
+  x-intersect:enter.half="scrolled = false" x-intersect:leave.half="scrolled =
+  true"
+#}}
+
+<article
+  class="hero"
+  x-intersect:enter.half="scrolled = false"
+  x-intersect:leave.half="scrolled = true"
+>
+  <div class="text-wrapper | flow">
+    <header class="heading | text-gradient">
+      <div class="eyebrow small-title | text-faded">Pro Services</div>
+      {{ title }}
+    </header>
+    <p>{{ preview_text_description | widont }}</p>
+    <div class="links | cluster">
+      <a class="button-link primary" href="/estimate">Get an Estimate</a>
+    </div>
+  </div>
+  <img
+    class="bg-image"
+    src="{{ glide src="/images/film-reel.png" preset="hero" }}"
+    alt=""
+    width="1920"
+  />
+</article>

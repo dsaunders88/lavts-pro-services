@@ -1,0 +1,17 @@
+<article class="formats | content-wrapper">
+  <div class="flow">
+    <header class="heading | text-gradient">
+      <div class="eyebrow | small-title">Format Capabilities</div>
+      {{ formats_heading_highlight }}
+    </header>
+    <p>{{ formats_text_description }}</p>
+  </div>
+  {{ productId = woocommerce_product_id }}
+  <div
+    id="formats"
+    hx-get="/formats/{{ productId }}"
+    hx-trigger="load"
+    hx-target="#formats"
+  ></div>
+  <img class="bg-image" src="/images/data-bg.png" alt="" />
+</article>

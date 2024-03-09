@@ -34,9 +34,13 @@
     &:hover {
       outline: 5px solid var(--color-primary-base);
 
-      /* & .overlay {
+      & .overlay {
         opacity: 0.55;
-      } */
+      }
+
+      & img {
+        transform: translateY(0.75rem);
+      }
     }
 
     & > svg {
@@ -119,6 +123,7 @@
       width: 60%;
       height: auto;
       object-fit: contain;
+      transition: transform 0.6s ease;
     }
   }
 
@@ -128,11 +133,11 @@
     }
 
     & .splide__list {
-      & li:nth-child(even) {
+      /* & li:nth-child(even) {
         & .overlay {
           opacity: 0.75;
         }
-      }
+      } */
     }
 
     & .splide__arrows {

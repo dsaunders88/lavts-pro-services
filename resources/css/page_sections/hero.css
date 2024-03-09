@@ -3,16 +3,19 @@
   --flow-space: var(--space-l);
   align-items: center;
   text-align: center;
-  padding-block-start: calc(var(--section-spacer) * 1.5);
-  padding-block-end: calc(var(--section-spacer) * 1.75);
-  color: var(--color-white);
-
-  & .heading {
-    font-size: var(--step-5);
-  }
+  padding-block-start: calc(var(--hero-padding, var(--section-spacer)) * 1.5);
+  padding-block-end: calc(var(--hero-padding, var(--section-spacer)) * 1.75);
+  color: var(--hero-color-text);
+  background: var(--hero-color-bg, transparent);
 
   & :is(.heading, h1) {
-    color: var(--color-white);
+    color: var(--hero-color-text, var(--color-text-heading));
+    font-size: var(--hero-heading-size, var(--step-5));
+  }
+
+  & .text-wrapper {
+    position: relative;
+    z-index: 2;
   }
 
   & .links {
@@ -23,9 +26,8 @@
 
   & .bg-image {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     inset: 0;
-    filter: brightness(0.3);
     height: 100%;
     width: 100%;
     object-fit: cover;
