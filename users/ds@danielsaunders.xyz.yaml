@@ -2,3 +2,30 @@ name: DS
 super: true
 id: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
 password_hash: $2y$10$HmxlbfsjG8QpRnUw2Timn.lvTz6DJo6utdXZw/EWQ8lumAvMhEc4y
+preferences:
+  collections:
+    formats:
+      columns:
+        - title
+        - slug
+        - status
+        - service_categories
+      filters:
+        category_groups:
+          display: 'Video Formats'
+          filters:
+            fields:
+              service_categories:
+                term: video
+        audio_formats:
+          display: 'Audio Formats'
+          filters:
+            fields:
+              service_categories:
+                term: video
+        film_formats:
+          display: 'Film Formats'
+          filters:
+            fields:
+              service_categories:
+                term: video

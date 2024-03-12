@@ -7,7 +7,7 @@ preview_icon: cassette-vhs
 preview_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
 preview_link_text: 'Learn More'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709948551
+updated_at: 1710279758
 featured_image: vhs-deck.jpg
 features:
   -
@@ -82,5 +82,9 @@ product_id: 1879
 formats_heading_highlight: '<h2>Video Format <strong>Experts</strong></h2>'
 formats_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
 woocommerce_product_id: 1879
+service_categories:
+  - video
 ---
-anything
+Arbitrary content can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

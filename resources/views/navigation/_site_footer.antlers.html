@@ -4,11 +4,74 @@
 #}}
 
 <footer class="site-footer">
-  <div class="content-wrapper | grid">
+  <div class="grid | content-wrapper">
+    <div class="logo | flow">
+      {{# <div class="small-title">Los Angeles Video Transfer Service</div> #}}
+      <img
+        src="{{ glide src="/images/lavts-logo.png" width="200" format="webp" }}"
+        alt="LAVTS Pro Services logo"
+        width="200"
+        loading="lazy"
+      />
+      <div class="title">Pro Services</div>
+      <p>
+        Los Angeles-based Pro Services offer personalized, high-quality
+        solutions for industry-focused requests.
+      </p>
+      <div class="social | cluster">
+        <a
+          href="https://www.yelp.com/biz/los-angeles-video-transfer-service-pasadena"
+          target="_blank"
+        >
+          <i class="fa-brands fa-yelp fa-xl"></i>
+          <span class="sr-only">Yelp</span>
+        </a>
+        <a
+          href="https://www.facebook.com/LosAngelesVideoTransferService/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-facebook fa-xl"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <div class="contact">(626) 795-3010</div>
+      </div>
+    </div>
+    <div class="column | flow">
+      <div class="small-title">Services</div>
+      <ul class="flow" role="list">
+        {{ nav:footer_services }}
+          <li><a href="/">{{ title }}</a></li>
+        {{ /nav:footer_services }}
+      </ul>
+    </div>
+    <div class="column | flow">
+      <div class="small-title">Company</div>
+      <ul class="flow" role="list">
+        {{ nav:footer_company }}
+          <li><a href="{{ url }}">{{ title }}</a></li>
+        {{ /nav:footer_company }}
+        <li>
+          <a
+            class="external cluster"
+            target="_blank"
+            href="https://losangelesvideotransfer.net/"
+          >
+            <span>Main Site</span>
+            <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="column">
+      <a class="button-link primary" href="/estimate">Get Estimate</a>
+    </div>
+  </div>
+  <div class="subfooter | content-wrapper">
     <div>
       ©
       {{ now | format('Y') }}
       {{ configuration:copyright_name ?? config:app:name }}
+      . All Rights Reserved.
     </div>
   </div>
 </footer>

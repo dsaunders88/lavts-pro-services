@@ -1,12 +1,11 @@
-title: Services
-template: templates/interior
+title: Formats
+template: default
 layout: layout
-mount: 5add62ea-f5e1-41ba-8c9d-2e4107c5866a
 taxonomies:
   - service_categories
 revisions: false
-route: '{mount}/{slug}'
-sort_dir: desc
+route: '/formats/{slug}'
+sort_dir: asc
 date_behavior:
   past: public
   future: private

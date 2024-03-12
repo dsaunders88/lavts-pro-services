@@ -8,6 +8,10 @@
   position: relative;
   z-index: 50;
 
+  & .flyout {
+    display: none;
+  }
+
   & a {
     color: var(--color-white);
     text-decoration: none;
@@ -15,6 +19,31 @@
     &:hover {
       color: color-mix(in srgb, var(--color-white), transparent 15%);
       text-decoration: underline;
+    }
+  }
+
+  & .site-tab {
+    position: relative;
+
+    &.selected {
+      font-weight: 700;
+      top: 1px;
+      padding-inline: 1.5rem;
+      padding-block: 0.5rem;
+      background-color: var(--color-white);
+      color: var(--color-primary-dark);
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-white);
+      }
     }
   }
 
@@ -224,7 +253,75 @@
 }
 
 .site-footer {
-  padding-block: var(--section-spacer);
-  background-color: var(--color-neutral-darkest);
+  position: relative;
+  padding-block-start: var(--section-spacer);
+  background: linear-gradient(
+    to bottom,
+    var(--color-neutral-darkest),
+    color-mix(in srgb, var(--color-neutral-darkest), black 25%)
+  );
   color: color-mix(in srgb, var(--color-white), transparent 30%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0.5;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-primary-base),
+      transparent
+    );
+  }
+
+  & .logo {
+    & .title {
+      font-weight: var(--font-heading-weight);
+      font-size: var(--step-2);
+      color: var(--color-white);
+    }
+  }
+
+  & .grid {
+    display: grid;
+    grid-template-columns: 30rem repeat(6, 1fr);
+    gap: var(--space-l);
+
+    & > * {
+      grid-column: span 2;
+    }
+
+    & > :first-child {
+      grid-column: span 1;
+    }
+  }
+
+  & .column {
+    & .small-title {
+      color: var(--color-white);
+    }
+    & a:not(.button-link) {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  & .social {
+    --cluster-space: 1.5rem;
+  }
+
+  & .subfooter {
+    opacity: 0.75;
+    border-top: 1px solid var(--color-neutral-darker);
+    margin-block-start: var(--section-spacer);
+    font-size: var(--step--1);
+    padding-block: var(--space-m);
+  }
 }

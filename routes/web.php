@@ -20,5 +20,5 @@ use App\Http\Controllers\FormatsController;
 //    'title' => 'Example'
 // ]);
 Route::get('capabilities/{id}', [TabsController::class, 'show']);
-Route::get('products-test', [ProductsController::class, 'show']);
-Route::get('formats/{productId}', [FormatsController::class, 'show']);
+// Route::get('products-test', [ProductsController::class, 'show']);
+// Route::get('formats/{productId}', [FormatsController::class, 'show']);

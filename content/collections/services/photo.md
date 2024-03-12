@@ -7,7 +7,7 @@ preview_icon: camera
 preview_text_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
 preview_link_text: 'Learn More'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709949678
+updated_at: 1710181052
 featured_image: pexels-photo-242473.jpg
 features:
   -
@@ -39,4 +39,6 @@ faqs:
     type: new_faq
     enabled: true
 woocommerce_product_id: 1798
+service_categories:
+  - photo
 ---

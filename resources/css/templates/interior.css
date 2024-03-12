@@ -1,6 +1,7 @@
 @import "../page_sections/hero";
 @import "../page_sections/features";
 @import "../page_sections/formats";
+@import "../page_sections/faqs.css";
 @import "../page_sections/cta";
 
 .interior {

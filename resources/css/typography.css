@@ -143,3 +143,25 @@ a:not(.button-link, .logo):hover {
     --link-border-hover: transparent;
   }
 }
+
+.rich-content {
+  --rich-content-spacing: var(--space-m);
+
+  &.constrain {
+    max-width: var(--paragraph-measure);
+    margin-inline: auto;
+  }
+
+  & > * + * {
+    margin-block-start: var(--rich-content-spacing);
+  }
+
+  & > :where(ul, ol) {
+    list-style-type: disc;
+    padding-inline-start: 1rem;
+
+    & > * + * {
+      margin-block-start: calc(var(--rich-content-spacing) * 0.5);
+    }
+  }
+}

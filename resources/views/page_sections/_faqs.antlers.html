@@ -1,10 +1,15 @@
-<section class="faqs | content-wrapper" x-data="{ active: 0 }" id="faqs">
-  <h2>{{ preview_title }} FAQs</h2>
-  <div class="flow">
-    {{ faqs }}
-      <article
-        role="region"
-        x-data="{
+<section class="faqs" x-data="{ active: 0 }" id="faqs">
+  <div class="content-wrapper">
+    <h2 class="text-gradient">
+      <strong>Pro</strong>
+      {{ preview_title }}
+      FAQs
+    </h2>
+    <div class="sets | flow">
+      {{ faqs }}
+        <article
+          role="region"
+          x-data="{
         id: {{ index }},
         get expanded() {
             return this.active === this.id
@@ -13,21 +18,24 @@
             this.active = value ? this.id : null
         }
     }"
-      >
-        <div class="question">
-          <button
-            @click="expanded = !expanded"
-            :aria-expanded="expanded"
-            :class="expanded ? 'active' : ''"
-          >
-            <span>{{ faq_question }}</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </button>
-        </div>
-        <div class="answer" x-show="expanded" x-collapse>
-          {{ faq_answer }}
-        </div>
-      </article>
-    {{ /faqs }}
+        >
+          <div class="question">
+            <button
+              @click="expanded = !expanded"
+              :aria-expanded="expanded"
+              :class="expanded ? 'active' : ''"
+            >
+              <span>{{ faq_question }}</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="answer" x-show="expanded" x-collapse>
+            <div class="flow">
+              {{ faq_answer }}
+            </div>
+          </div>
+        </article>
+      {{ /faqs }}
+    </div>
   </div>
 </section>

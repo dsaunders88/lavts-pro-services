@@ -1,0 +1,56 @@
+.faqs {
+  margin-block: var(--section-spacer);
+  padding-block: var(--section-spacer);
+  background-color: var(--color-neutral-light);
+
+  & .content-wrapper {
+    max-width: 60rem;
+  }
+
+  & .sets {
+    margin-block-start: var(--space-l);
+  }
+
+  & button {
+    color: inherit;
+    display: inline-flex;
+    gap: var(--space-s);
+    justify-content: space-between;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    text-align: left;
+    background: var(--color-white);
+    box-shadow: var(--shadow-none);
+    padding: var(--space-m);
+    font-size: var(--step-1);
+    cursor: pointer;
+    border-radius: var(--rounded-corners-small);
+    transition: all 0.3s linear;
+
+    &.active {
+      & svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  & svg {
+    transition: transform 0.2s ease-in;
+  }
+
+  & .question {
+    &:hover {
+      & button {
+        box-shadow: var(--shadow-light);
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+
+  & .answer {
+    & > div {
+      padding: var(--space-m);
+    }
+  }
+}

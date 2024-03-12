@@ -1,0 +1,11 @@
+{{#
+  @name Rich Content section
+  @desc Component for rendering rich content/markdown.
+  @param max_width Set the max width of the text block to paragraph measure.
+#}}
+
+<section
+  class="{{ ['rich-content' => true , 'constrain' => max_width] | classes }}"
+>
+  {{ content }}
+</section>
