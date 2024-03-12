@@ -15,6 +15,7 @@
     columns: 3;
     gap: var(--space-l);
     list-style-type: disc;
+    font-size: var(--step--1);
 
     & > * + * {
       margin-block-start: var(--space-xs);

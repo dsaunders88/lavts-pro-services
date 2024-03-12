@@ -10,7 +10,8 @@ article:
       -
         type: text
         text: about
-template: templates/default
+template: templates/estimate
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1710280474
+updated_at: 1710287821
+hero_heading_highlight: '<h1><strong>Uniquely</strong> Qualified</h1>'
 ---

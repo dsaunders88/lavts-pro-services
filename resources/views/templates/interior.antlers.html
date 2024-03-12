@@ -1,6 +1,8 @@
-{{ push:styles }}
-  {{ vite src="resources/css/templates/interior.css" }}
-{{ /push:styles }}
+{{#
+  {{ push:styles }}
+    {{ vite src="resources/css/templates/interior.css" }}
+  {{ /push:styles }}
+#}}
 <main class="interior" id="content">
   {{ partial:page_sections/hero_interior }}
   {{ partial:page_sections/features }}
