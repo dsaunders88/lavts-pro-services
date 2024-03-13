@@ -22,7 +22,7 @@ article:
 cta_heading: 'Ready to get started?'
 cta_description: 'Get personable and professional service from Los Angeles Video Transfer Service for your next media transfer project.'
 updated_by: b548c8dc-55b3-4fb3-aa8c-b78417b65d44
-updated_at: 1709852994
+updated_at: 1710288483
 hero_buttons:
   -
     id: lswgzyge
@@ -126,11 +126,11 @@ team_text_description: 'With our extensive knowledge of formats, processes, and 
 team_label: 'Our Values'
 team_link_type: url
 team_target_blank: false
-team_url: /about-us
 team_button_type: button
 team_featured_image:
   - team-cutout.png
 team_background_image:
   - film-reel.png
 benefits_text_description: 'With our extensive knowledge of formats, processes, and techniques, we can help you with any type of transfer.'
+team_url: /about
 ---
