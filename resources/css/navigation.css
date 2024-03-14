@@ -309,6 +309,10 @@
   }
 
   & .column {
+    &.flow {
+      --flow-space: 0.75rem;
+    }
+
     & .small-title {
       color: var(--color-white);
     }
