@@ -1,0 +1,52 @@
+<article class="about-services">
+  <div class="content-wrapper">
+    <div class="has-sidebar">
+      <div class="flow">
+        <header class="heading | text-gradient">
+          <div class="eyebrow small-title | text-faded">
+            {{ presentation_section_title }}
+          </div>
+          {{ presentation_heading_highlight }}
+        </header>
+        <p>{{ presentation_text_description }}</p>
+        {{ if presentation_list }}
+          <ul role="list">
+            {{ presentation_list }}
+              <li class="cluster">
+                <i class="fa-solid fa-circle-check fa-xs"></i>
+                {{ value }}
+              </li>
+            {{ /presentation_list }}
+          </ul>
+        {{ /if }}
+      </div>
+      {{ if presentation_image }}
+        {{ glide :src="presentation_image" preset="featured" }}
+          <img
+            class="featured-img"
+            src="{{ url }}"
+            width="{{ width }}"
+            height="{{ hegith }}"
+            alt="{{ alt }}"
+            loading="lazy"
+            decoding="async"
+          />
+        {{ /glide }}
+      {{ /if }}
+    </div>
+  </div>
+  {{ if presentation_background_image }}
+    {{ glide :src="presentation_background_image" preset="hero" }}
+      <img
+        class="bg-image"
+        src="{{ url }}"
+        width="{{ width }}"
+        height="{{ height }}"
+        alt="{{ alt }}"
+        loading="lazy"
+        decoding="async"
+      />
+    {{ /glide }}
+  {{ /if }}
+  <div class="overlay"></div>
+</article>

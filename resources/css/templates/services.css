@@ -3,13 +3,11 @@
 @import "../page_sections/formats";
 @import "../page_sections/faqs.css";
 @import "../page_sections/case-study-preview";
-@import "../page_sections/industry";
-@import "../page_sections/why-benefits";
 @import "../page_sections/cta";
 @import "../page_sections/clients";
 @import "../page_sections/newsletter";
 
-.interior-page {
+.services-page {
   & .hero {
     --hero-color-text: var(--color-white);
     --hero-heading-size: var(--step-4);

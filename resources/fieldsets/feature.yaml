@@ -17,7 +17,7 @@ fields:
     handle: text_description
     field: common.text_description
   -
-    import: button
+    import: link
   -
     handle: featured_image
     field:

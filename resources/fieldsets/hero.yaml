@@ -13,8 +13,6 @@ fields:
       visibility: visible
       replicator_preview: true
       hide_display: false
-      validate:
-        - required
   -
     handle: heading_highlight
     field: common.heading_highlight
@@ -31,4 +29,4 @@ fields:
       replicator_preview: true
       hide_display: false
   -
-    import: buttons
+    import: link_group

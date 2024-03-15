@@ -1,143 +1,24 @@
 @import "../page_sections/hero";
+@import "../page_sections/about-services.css";
 @import "../page_sections/benefits-preview";
 @import "../page_sections/tabs";
 @import "../page_sections/features";
 @import "../page_sections/team";
 @import "../page_sections/cta";
+@import "../page_sections/clients";
 
-main.home {
+main.home-page {
   /* margin-block-start: calc(var(--section-spacer) * 0.5); */
   overflow: hidden;
   /* margin-block-end: var(--section-spacer); */
 }
 
-.home {
+.home-page {
   & .hero {
     --hero-color-text: var(--color-white);
 
     & .bg-image {
       filter: brightness(0.3);
-    }
-  }
-
-  & .about-presentation {
-    position: relative;
-    z-index: 4;
-    background-color: var(--color-neutral-light);
-    margin-block-end: var(--section-spacer);
-    padding-block: var(--section-spacer);
-    top: -3rem;
-    width: calc(100% - var(--space-xl));
-    border-radius: var(--rounded-corners);
-    margin-inline: auto;
-    overflow: hidden;
-
-    & .content-wrapper {
-      z-index: 3;
-    }
-
-    & header {
-      &.flow {
-        gap: var(--space-3xs);
-      }
-    }
-
-    & .has-sidebar {
-      --main-min-width: 45%;
-      --sidebar-gap: var(--space-2xl);
-      align-items: center;
-
-      & > .flow {
-        gap: var(--space-m);
-      }
-    }
-
-    & .featured-img {
-      width: 35rem;
-      border-radius: var(--rounded-corners);
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 4/3;
-      box-shadow: var(--shadow-regular);
-    }
-
-    & ul {
-      columns: 2;
-
-      & li {
-        margin-block-end: var(--space-2xs);
-      }
-
-      & svg {
-        color: var(--color-primary-bright);
-      }
-    }
-
-    & .bg-image {
-      position: absolute;
-      z-index: 1;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      filter: grayscale(1);
-      mix-blend-mode: color-burn;
-      opacity: 0.3;
-      object-fit: cover;
-    }
-
-    & .overlay {
-      position: absolute;
-      z-index: 0;
-      background: linear-gradient(
-        to bottom right,
-        color-mix(in srgb, var(--color-primary-bright), white 3%),
-        color-mix(in srgb, var(--color-primary-base), white 6%)
-      );
-      right: -15%;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      transform: skew(-20deg);
-      box-shadow: inset 0 0 1rem
-        color-mix(in srgb, var(--color-primary-dark), black 10%);
-    }
-  }
-
-  & .clients {
-    position: relative;
-    margin-block-start: calc(var(--section-spacer) * 0.25 * -1);
-    margin-block-end: var(--section-spacer);
-    padding-block-end: calc(var(--section-spacer) * 0.75);
-
-    &.flow {
-      gap: var(--space-m);
-    }
-
-    & .small-title {
-      color: var(--color-primary-base);
-    }
-
-    & .cluster {
-      --cluster-space: var(--space-xl);
-      --cluster-justify: center;
-    }
-
-    & img {
-      height: 2rem;
-      filter: grayscale(1);
-      opacity: 0.8;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 70%;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      background-color: var(--color-primary-light);
-      mask-image: linear-gradient(to right, transparent, black, transparent);
     }
   }
 
@@ -158,7 +39,7 @@ main.home {
       overflow: hidden;
 
       & .text-wrapper {
-        color: color-mix(in srgb, var(--color-white) 75%, transparent);
+        color: var(--color-text-body-dark);
       }
 
       & .bg-element {

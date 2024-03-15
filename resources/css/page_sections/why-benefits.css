@@ -1,0 +1,29 @@
+.why-benefits {
+  background-color: var(--color-neutral-light);
+  padding-block: var(--section-spacer);
+
+  & .entries {
+    & > * + * {
+      margin-block-start: var(--space-3xl);
+      padding-block-start: var(--space-3xl);
+      border-top: 1px solid
+        color-mix(in srgb, var(--color-neutral-base), transparent 75%);
+    }
+  }
+
+  & article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--space-2xl);
+    row-gap: var(--space-m);
+
+    & svg {
+      width: 2rem;
+      color: var(--color-primary-base);
+    }
+
+    & :not(h2, svg) {
+      max-width: var(--paragraph-measure);
+    }
+  }
+}

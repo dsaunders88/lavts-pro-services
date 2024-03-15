@@ -86,6 +86,7 @@ tabs:
                       fields:
                         -
                           import: feature
+                          prefix: feature_
               type: replicator
               display: Features
               listable: hidden
@@ -132,6 +133,30 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: 'Featured Case Study'
+        fields:
+          -
+            handle: featured_case_study
+            field:
+              max_items: 1
+              mode: default
+              create: true
+              collections:
+                - case_studies
+              type: entries
+              display: 'Featured Case Study'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: CTA
+        fields:
+          -
+            import: call_to_action
+            prefix: cta_
   seo:
     display: SEO
     sections:
@@ -160,4 +185,12 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+          -
+            handle: service_categories
+            field:
+              type: terms
+              taxonomies:
+                - service_categories
+              display: 'Service Categories'
+              mode: select
 title: Service

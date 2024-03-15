@@ -8,7 +8,7 @@
   }
 
   & .sets {
-    margin-block-start: var(--space-l);
+    margin-block-start: var(--space-xl);
   }
 
   & button {

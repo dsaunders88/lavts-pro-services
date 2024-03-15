@@ -19,9 +19,11 @@
     <p>{{ hero_description or 'Description'
  | widont }}</p>
     <div class="links | cluster">
-      {{ hero_buttons }}
-        {{ partial:components/button_link style="{{index === 0 ? "primary" : "ghost"}}" }}
-      {{ /hero_buttons }}
+      {{ hero_links_list }}
+        {{ hero_link = link }}
+          {{ partial:components/button_link style="{{index === 0 ? "primary" : "ghost"}}" }}
+        {{ /hero_link }}
+      {{ /hero_links_list }}
     </div>
   </div>
   <img

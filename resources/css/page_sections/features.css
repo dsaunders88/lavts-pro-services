@@ -32,7 +32,13 @@
 
     & .text {
       &.flow {
-        gap: var(--space-l);
+        gap: var(--space-xl);
+      }
+
+      & header {
+        &.flow {
+          gap: var(--space-m);
+        }
       }
 
       & p {

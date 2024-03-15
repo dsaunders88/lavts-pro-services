@@ -40,6 +40,6 @@
     object-fit: cover;
     filter: grayscale(1);
     mix-blend-mode: multiply;
-    opacity: 0.2;
+    opacity: 0.4;
   }
 }

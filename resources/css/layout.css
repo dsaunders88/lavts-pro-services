@@ -19,6 +19,10 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--flow-space, 1rem);
+
+  &:has(header + p) {
+    --flow-space: var(--space-m);
+  }
 }
 
 .cluster {

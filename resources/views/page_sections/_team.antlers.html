@@ -8,9 +8,9 @@
         </header>
         <p>{{ team_text_description }}</p>
       </div>
-      <a href="{{ team_url }}" class="button-link primary">
-        {{ team_label }}
-      </a>
+      {{ team_link }}
+        {{ partial:components/button_link }}
+      {{ /team_link }}
     </div>
     {{ glide :src="team_featured_image" preset="featured" }}
       <img

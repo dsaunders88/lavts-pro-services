@@ -1,0 +1,30 @@
+.newsletter {
+  margin-block: calc(var(--section-spacer) * 0.75);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+
+  /* & h2 {
+    font-size: var(--step-4);
+  } */
+
+  & form {
+    & input[type="email"] {
+      padding: 0.6rem 1rem;
+      min-width: 20rem;
+      border-radius: var(--rounded-corners-small);
+      box-shadow: var(--shadow-light);
+      border: 1px solid
+        color-mix(in srgb, var(--color-neutral-base), transparent 50%);
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--color-neutral-base), transparent 40%);
+      }
+    }
+
+    & button {
+      cursor: pointer;
+    }
+  }
+}

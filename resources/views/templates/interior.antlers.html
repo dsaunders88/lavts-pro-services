@@ -3,12 +3,56 @@
     {{ vite src="resources/css/templates/interior.css" }}
   {{ /push:styles }}
 #}}
-<main class="interior" id="content">
+<main class="interior-page" id="content">
   {{ partial:page_sections/hero_interior }}
-  {{ partial:page_sections/features }}
-  {{ partial:page_sections/formats }}
-  <article class="content-wrapper">
-    {{ partial:page_sections/rich_content max_width="true" }}
-  </article>
-  {{ partial:page_sections/faqs }}
+  <div class="industry | content-wrapper">
+    <div class="grid">
+      <div class="flow">
+        <header class="heading | text-gradient">
+          <div class="eyebrow small-title | text-faded">
+            {{ presentation_section_title }}
+          </div>
+          {{ presentation_heading_highlight }}
+        </header>
+        <p>{{ presentation_text_description }}</p>
+      </div>
+      <ul class="industries | cluster" role="list">
+        {{ presentation_list }}
+          <li class="button-link">
+            {{ value }}
+          </li>
+        {{ /presentation_list }}
+      </ul>
+    </div>
+  </div>
+  <div class="why-benefits">
+    <div class="content-wrapper">
+      <div class="entries">
+        {{ entries }}
+          <article id="{{ slug }}">
+            <div class="flow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"
+                />
+              </svg>
+              <h2>{{ title }}</h2>
+            </div>
+            <div>{{ content }}</div>
+          </article>
+        {{ /entries }}
+      </div>
+    </div>
+  </div>
+  {{ partial:page_sections/cta }}
+  {{ partial:page_sections/newsletter }}
 </main>

@@ -1,0 +1,86 @@
+.about-services {
+  position: relative;
+  z-index: 4;
+  background-color: var(--color-neutral-light);
+  margin-block-end: var(--section-spacer);
+  padding-block: var(--section-spacer);
+  top: -3rem;
+  width: calc(100% - var(--space-xl));
+  border-radius: var(--rounded-corners);
+  margin-inline: auto;
+  overflow: hidden;
+
+  & .content-wrapper {
+    z-index: 3;
+  }
+
+  & header {
+    &.flow {
+      gap: var(--space-3xs);
+    }
+  }
+
+  & .has-sidebar {
+    --main-min-width: 45%;
+    --sidebar-gap: var(--space-2xl);
+    align-items: center;
+
+    & > .flow {
+      gap: var(--space-m);
+    }
+  }
+
+  & .featured-img {
+    width: 35rem;
+    border-radius: var(--rounded-corners);
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-regular);
+  }
+
+  & ul {
+    columns: 2;
+
+    & .cluster {
+      --cluster-space: 0.5rem;
+    }
+
+    & li {
+      margin-block-end: var(--space-2xs);
+    }
+
+    & svg {
+      color: var(--color-primary-bright);
+    }
+  }
+
+  & .bg-image {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    mix-blend-mode: color-burn;
+    opacity: 0.3;
+    object-fit: cover;
+  }
+
+  & .overlay {
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(
+      to bottom right,
+      color-mix(in srgb, var(--color-primary-bright), white 3%),
+      color-mix(in srgb, var(--color-primary-base), white 6%)
+    );
+    right: -15%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transform: skew(-20deg);
+    box-shadow: inset 0 0 1rem
+      color-mix(in srgb, var(--color-primary-dark), black 10%);
+  }
+}

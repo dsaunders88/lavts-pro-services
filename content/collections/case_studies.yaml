@@ -1,12 +1,11 @@
-title: Services
-template: templates/services
+title: 'Case Studies'
+template: templates/case-studies-show
 layout: layout
-mount: 5add62ea-f5e1-41ba-8c9d-2e4107c5866a
 taxonomies:
   - service_categories
 revisions: false
-route: '{mount}/{slug}'
-sort_dir: desc
+route: '/case-studies/{slug}'
+sort_dir: asc
 date_behavior:
   past: public
   future: private
@@ -15,6 +14,3 @@ preview_targets:
     label: Entry
     url: '{permalink}'
     refresh: true
-structure:
-  root: false
-  max_depth: 1

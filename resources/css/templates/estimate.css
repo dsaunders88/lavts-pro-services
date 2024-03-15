@@ -1,6 +1,6 @@
 @import "../page_sections/hero";
 
-.estimate {
+.estimate-page {
   & .hero {
     --hero-padding: calc(var(--section-spacer) * 0.5);
 

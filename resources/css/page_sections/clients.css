@@ -1,0 +1,38 @@
+.clients {
+  position: relative;
+  margin-block: calc(var(--section-spacer) * 0.75);
+  /* margin-block-start: calc(var(--section-spacer) * 0.25 * -1);
+    margin-block-end: var(--section-spacer);
+    padding-block-end: calc(var(--section-spacer) * 0.75); */
+
+  &.flow {
+    gap: var(--space-m);
+  }
+
+  & .small-title {
+    color: var(--color-primary-base);
+  }
+
+  & .cluster {
+    --cluster-space: var(--space-xl);
+    --cluster-justify: center;
+  }
+
+  & img {
+    height: 2rem;
+    filter: grayscale(1);
+    opacity: 0.8;
+  }
+
+  /* &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 70%;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      background-color: var(--color-primary-light);
+      mask-image: linear-gradient(to right, transparent, black, transparent);
+    } */
+}

@@ -2,7 +2,7 @@
   {{ features }}
     <article>
       <div class="image">
-        {{ glide :src="featured_image" preset="featured" }}
+        {{ glide :src="feature_featured_image" preset="featured" }}
           <img
             src="{{ url }}"
             width="{{ width }}"
@@ -16,10 +16,12 @@
       </div>
       <div class="text | flow">
         <header class="flow">
-          <h2>{{ heading | title }}</h2>
-          <p>{{ text_description }}</p>
+          <h2>{{ feature_heading | title }}</h2>
+          <p>{{ feature_text_description }}</p>
         </header>
-        {{ partial:components/button_link withArrow="true" }}
+        {{ feature_link }}
+          {{ partial:components/button_link withArrow="true" }}
+        {{ /feature_link }}
       </div>
     </article>
   {{ /features }}

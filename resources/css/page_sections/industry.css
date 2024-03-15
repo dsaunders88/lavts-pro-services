@@ -1,0 +1,27 @@
+.industry {
+  margin-block: var(--section-spacer);
+
+  & .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2xl);
+  }
+
+  & .industries {
+    &.cluster {
+      --cluster-justify: center;
+    }
+
+    & .button-link {
+      background: color-mix(
+        in srgb,
+        var(--color-primary-base),
+        transparent 95%
+      );
+      border: 1px solid var(--color-primary-base);
+      color: var(--color-primary-dark);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+title: Link
+fields:
+  -
+    handle: link
+    field:
+      fields:
+        -
+          handle: label
+          field:
+            input_type: text
+            character_limit: 60
+            antlers: false
+            type: text
+            display: Label
+            instructions: 'Set the name of the link.'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: href
+          field:
+            collections:
+              - services
+              - pages
+            type: link
+            display: 'Links to'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            instructions: 'Link to a collection entry or arbitrary URL.'
+        -
+          handle: target
+          field:
+            default: false
+            type: toggle
+            display: 'New Tab'
+            instructions: 'Check "on" to open link in a new tab.'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      fullscreen: true
+      type: group
+      display: Link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

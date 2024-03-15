@@ -1,0 +1,34 @@
+{{#
+  @name Case Study Preview Section
+  @desc Preview of a featured case study on services pages.
+#}}
+
+<div class="content-wrapper">
+  {{ featured_case_study }}
+    <article class="case-study-preview">
+      <a class="img-wrapper" href="{{ url }}">
+        {{ glide :src="featured_image" width="900" format="webp" }}
+          <img
+            class="featured-image"
+            src="{{ url }}"
+            alt="{{ alt }}"
+            width="{{ width }}"
+            height="{{ height }}"
+            loading="lazy"
+            decoding="async"
+          />
+        {{ /glide }}
+      </a>
+      <div class="text | flow">
+        <header>
+          <div class="eyebrow | small-title">Case Study</div>
+          <h3 class="heading">
+            <a href="{{ url }}">{{ preview_title }}</a>
+          </h3>
+        </header>
+        <p class="description">{{ preview_text_description }}</p>
+        <a href="{{ url }}">{{ preview_link_text }}</a>
+      </div>
+    </article>
+  {{ /featured_case_study }}
+</div>

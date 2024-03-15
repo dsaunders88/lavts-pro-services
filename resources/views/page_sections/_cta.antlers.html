@@ -10,9 +10,9 @@
       <p>{{ cta_description or 'Description' }}</p>
     </div>
     <div class="links | cluster">
-      {{ cta_buttons }}
-        {{ partial:components/button_link style="{{index === 0 ? "ghost" : "ghost-primary"}}" }}
-      {{ /cta_buttons }}
+      {{ cta_link }}
+        {{ partial:components/button_link style="ghost" withArrow="true" }}
+      {{ /cta_link }}
     </div>
   </div>
   {{ if cta_background_image }}

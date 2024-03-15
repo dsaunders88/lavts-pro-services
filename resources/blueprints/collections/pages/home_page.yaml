@@ -128,6 +128,7 @@ tabs:
                       fields:
                         -
                           import: feature
+                          prefix: feature_
               type: replicator
               display: Features
               listable: hidden

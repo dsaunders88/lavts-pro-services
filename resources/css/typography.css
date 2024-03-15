@@ -57,7 +57,7 @@ a:not(.button-link, .logo):hover {
   letter-spacing: var(--caps-letter-spacing);
 
   &.eyebrow {
-    margin-block-end: var(--space-s);
+    margin-block-end: var(--space-xs);
   }
 }
 

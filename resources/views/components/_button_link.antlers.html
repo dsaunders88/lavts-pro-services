@@ -2,13 +2,16 @@
   @name Button Link component
   @desc Shortcut button link with styles and icon.
   @param label Link text.
+  @param href Link destination (entry or url).
+  @param target Boolean Set target="_blank" or "_self".
   @param withArrow Boolean. Add a Fontawesome arrow icon.
   @param style Set the link style.
 #}}
 
 <a
-  {{ partial:statamic-peak-tools::snippets/button_attributes }}
   class="button-link {{ style or "primary" }}"
+  href="{{ href }}"
+  target="{{ target === true ? '_blank' : '_self' }}"
 >
   {{ label }}
   {{ if withArrow }}
