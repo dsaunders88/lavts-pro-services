@@ -10,3 +10,7 @@
 @import "templates/interior.css";
 @import "templates/services.css";
 @import "templates/estimate.css";
+
+[x-cloak] {
+  display: none !important;
+}
