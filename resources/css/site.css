@@ -6,10 +6,26 @@
 @import "exception";
 @import "utilities";
 
-@import "templates/home.css";
-@import "templates/interior.css";
-@import "templates/services.css";
-@import "templates/estimate.css";
+@import "page_sections/about-services";
+@import "page_sections/benefits-preview";
+@import "page_sections/case-study-preview";
+@import "page_sections/clients";
+@import "page_sections/cta";
+@import "page_sections/faqs";
+@import "page_sections/features";
+@import "page_sections/formats";
+@import "page_sections/hero";
+@import "page_sections/industry";
+@import "page_sections/newsletter";
+@import "page_sections/preview-card";
+@import "page_sections/tabs";
+@import "page_sections/team";
+@import "page_sections/why-benefits";
+
+@import "templates/home";
+@import "templates/interior";
+@import "templates/services";
+@import "templates/estimate";
 
 [x-cloak] {
   display: none !important;

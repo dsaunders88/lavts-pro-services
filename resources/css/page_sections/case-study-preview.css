@@ -2,7 +2,7 @@
   position: relative;
   margin-block: var(--section-spacer);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.5fr 2fr;
   align-items: center;
 
   & .text {

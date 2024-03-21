@@ -1,24 +1,67 @@
 .why-benefits {
-  background-color: var(--color-neutral-light);
-  padding-block: var(--section-spacer);
+  /* background-color: var(--color-neutral-light); */
+  /* padding-block: var(--section-spacer); */
+  margin-block-end: var(--section-spacer);
+
+  & .content-wrapper {
+    overflow: hidden;
+    border-radius: var(--rounded-corners);
+
+    & .bg-element {
+      top: 220px;
+    }
+  }
+
+  & .grid-9 {
+    padding-block: var(--section-spacer);
+    padding-inline: var(--space-xl);
+
+    & > :first-child {
+      position: sticky;
+      top: 2rem;
+      place-self: flex-start;
+      grid-column: span 4;
+      padding-inline-end: var(--space-xl);
+
+      & p {
+        font-size: var(--step-1);
+      }
+    }
+
+    & > :last-child {
+      grid-column: 5 / span 5;
+    }
+  }
+
+  & .eyebrow {
+    color: var(--color-primary-bright);
+  }
+
+  & h2 {
+    font-size: var(--step-4);
+  }
+
+  & :is(h2, h3) {
+    color: var(--color-white);
+  }
 
   & .entries {
     & > * + * {
-      margin-block-start: var(--space-3xl);
-      padding-block-start: var(--space-3xl);
+      margin-block-start: var(--space-xl);
+      padding-block-start: var(--space-l);
       border-top: 1px solid
-        color-mix(in srgb, var(--color-neutral-base), transparent 75%);
+        color-mix(in srgb, var(--color-neutral-base), transparent 20%);
     }
   }
 
   & article {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: var(--space-2xl);
-    row-gap: var(--space-m);
+    row-gap: var(--space-m); */
 
     & svg {
-      width: 2rem;
+      width: 2.5rem;
       color: var(--color-primary-base);
     }
 

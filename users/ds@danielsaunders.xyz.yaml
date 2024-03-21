@@ -29,3 +29,8 @@ preferences:
             fields:
               service_categories:
                 term: video
+    benefits:
+      columns:
+        - title
+        - slug
+        - status

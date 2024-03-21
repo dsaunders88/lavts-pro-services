@@ -1,4 +1,4 @@
-@import "../page_sections/hero";
+/* @import "../page_sections/hero";
 @import "../page_sections/features";
 @import "../page_sections/formats";
 @import "../page_sections/faqs.css";
@@ -7,7 +7,7 @@
 @import "../page_sections/why-benefits";
 @import "../page_sections/cta";
 @import "../page_sections/clients";
-@import "../page_sections/newsletter";
+@import "../page_sections/newsletter"; */
 
 .interior-page {
   & .hero {

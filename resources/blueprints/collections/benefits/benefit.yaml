@@ -3,6 +3,7 @@ tabs:
     display: Main
     sections:
       -
+        display: Core
         fields:
           -
             handle: title
@@ -11,6 +12,18 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: tagline
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Tagline
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
           -
             handle: content
             field:
