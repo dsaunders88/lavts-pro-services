@@ -104,10 +104,6 @@
       }
     }
 
-    & a {
-      color: var(--color-white);
-    }
-
     & .bg-image {
       position: absolute;
       inset: 0;

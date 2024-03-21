@@ -40,7 +40,10 @@
         <a href="{{ currentTab.url }}">{{ currentTab.title }}</a>
       </h3>
       <p class="description">{{ currentTab.preview_text_description }}</p>
-      <a href="{{ currentTab.url }}">{{ currentTab.preview_link_text }}</a>
+      <div class="link | white has-arrow">
+        <a href="{{ currentTab.url }}">{{ currentTab.preview_link_text }}</a>
+        <i class="fa-solid fa-chevron-right fa-2xs"></i>
+      </div>
     </div>
     <!-- troubleshoot not getting image source in production -->
     {{# {{ currentTab.featured_image.url }} #}}

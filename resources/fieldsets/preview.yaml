@@ -1,19 +1,6 @@
 title: 'Preview Fields'
 fields:
   -
-    handle: icon
-    field:
-      input_type: text
-      antlers: false
-      type: text
-      display: Icon
-      instructions: 'FontAwesome icon name, i.e. "user".'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-  -
     handle: text_description
     field: common.text_description
   -
@@ -29,3 +16,28 @@ fields:
       replicator_preview: true
       hide_display: false
       instructions: 'The label/text for the link to this entry.'
+  -
+    handle: icon
+    field:
+      options:
+        play-circle: Play
+        computer-desktop: Computer
+        film: Film
+        shield-check: Shield
+        arrow-path-rounded-square: 'Arrow Loop'
+        users: Users
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Icon
+      instructions: 'Select an icon from the Hero Icon set.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

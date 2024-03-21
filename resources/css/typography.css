@@ -47,6 +47,52 @@ a:not(.button-link, .logo):hover {
   );
 }
 
+.link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cluster-space, 0.5rem);
+  --link-color: var(--color-primary-base);
+  --link-color-hover: var(--color-primary-bright);
+  --link-opacity: 1;
+
+  &.white {
+    --link-color: var(--color-white);
+    --link-color-hover: var(--color-white);
+    --link-opacity: 0.9;
+  }
+
+  & a {
+    color: var(--link-color);
+    opacity: var(--link-opacity);
+
+    &:hover {
+      color: var(--link-color-hover);
+      opacity: 1;
+    }
+  }
+
+  &.has-arrow {
+    --cluster-space: 0.5rem;
+
+    & svg {
+      color: var(--link-color);
+      position: relative;
+      top: 1px;
+      opacity: 0;
+      transform: translateX(-1px);
+      transition:
+        transform 0.4s ease,
+        opacity 0.3s ease;
+    }
+
+    & a:hover + svg {
+      opacity: 1;
+      transform: translateX(1px);
+    }
+  }
+}
+
 .small-title {
   font-size: var(--step--1, 14px);
   font-weight: 700;

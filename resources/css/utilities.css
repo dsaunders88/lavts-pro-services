@@ -62,9 +62,8 @@
 
 .icon {
   display: inline-block;
-  fill: currentColor;
   height: 1em;
-  width: auto;
+  width: 1em;
 
   &.small {
     font-size: 0.75em;

@@ -1,7 +1,7 @@
 <section class="features | content-wrapper">
   {{ features }}
     <article>
-      <div class="image">
+      <div class="image-wrapper">
         {{ glide :src="feature_featured_image" preset="featured" }}
           <img
             src="{{ url }}"
@@ -12,7 +12,10 @@
             decoding="async"
           />
         {{ /glide }}
-        <div class="underlay"></div>
+        <div
+          class="underlay"
+          data-position="{{ index % 2 === 0 ? 'bottom-left' : 'bottom-right' }}"
+        ></div>
       </div>
       <div class="text | flow">
         <header class="flow">

@@ -1,0 +1,55 @@
+<div
+  class="slider"
+  x-data="{
+  init() {
+    new Splide(this.$refs.splide, {
+      perPage: 3,
+      perMove: 1,
+      gap: '2rem',
+    }).mount()
+  }
+}"
+>
+  <div x-ref="splide" class="splide" aria-label="Pro Services Benefits">
+    <div class="splide__arrows cluster">
+      <button class="splide__arrow splide__arrow--prev button-link">
+        <i class="fa-solid fa-chevron-left"></i>
+        Prev
+      </button>
+      <button class="splide__arrow splide__arrow--next button-link">
+        Next
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="splide__track">
+      <ul role="list" class="splide__list">
+        {{ grid_entries }}
+          <li class="splide__slide">
+            <article>
+              {{ partial:components/hero_icons icon_name="{{preview_icon}}" }}
+              <div class="text | flow">
+                <h3 class="heading">
+                  <a href="/why-pro#{{ slug }}">{{ title }}</a>
+                </h3>
+                <p>{{ preview_text_description }}</p>
+                <footer class="link | white has-arrow">
+                  <a href="/why-pro#{{ slug }}">{{ preview_link_text }}</a>
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                </footer>
+              </div>
+              <img src="/images/svg/data-lines.svg" alt="" />
+              <div class="overlay"></div>
+            </article>
+          </li>
+        {{ /grid_entries }}
+      </ul>
+      {{#
+        <div class="rules">
+          <div aria-hidden="true"></div>
+          <div aria-hidden="true"></div>
+          <div aria-hidden="true"></div>
+        </div>
+      #}}
+    </div>
+  </div>
+</div>

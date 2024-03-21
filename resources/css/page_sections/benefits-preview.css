@@ -48,6 +48,7 @@
       position: relative;
       z-index: 3;
       height: 2rem;
+      width: 2rem;
       place-self: flex-start;
       margin-block-end: var(--space-s);
     }
@@ -72,36 +73,13 @@
       }
     }
 
-    & footer {
-      &.cluster {
-        --cluster-space: 0.5rem;
+    /* & footer {
+      &.link {
+        --link-color: var(--color-white);
+        --link-color-hover: var(--color-white);
+        --link-opacity: 0.9;
       }
-
-      & svg {
-        position: relative;
-        top: 1px;
-        opacity: 0;
-        transform: translateX(-1px);
-        transition:
-          transform 0.4s ease,
-          opacity 0.3s ease;
-      }
-
-      & a {
-        color: var(--color-white);
-        opacity: 0.7;
-
-        &:hover {
-          color: var(--color-white);
-          opacity: 1;
-        }
-
-        &:hover + svg {
-          opacity: 1;
-          transform: translateX(1px);
-        }
-      }
-    }
+    } */
 
     & .overlay {
       position: absolute;
@@ -116,7 +94,7 @@
 
     & img {
       position: absolute;
-      top: -12rem;
+      top: -8rem;
       left: 0;
       z-index: 2;
       opacity: 0.2;

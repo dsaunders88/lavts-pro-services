@@ -11,4 +11,58 @@
       margin-inline: auto;
     }
   }
+
+  & .form-wrapper {
+    margin-block-start: calc(var(--section-spacer) * -0.25);
+    margin-block-end: var(--section-spacer);
+    background-color: var(--color-neutral-light);
+    border-radius: var(--rounded-corners);
+    padding: var(--space-2xl);
+  }
+
+  & form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  & .form-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+
+    &:has(input[required]) label::after {
+      content: "*";
+      color: var(--color-primary-bright);
+      margin-left: 3px;
+    }
+  }
+
+  & :is(.service-items, .contact-info) {
+    &.flow {
+      --flow-space: var(--space-m);
+    }
+  }
+
+  & :is(input, textarea) {
+    border-radius: var(--rounded-corners-small);
+    box-shadow: var(--shadow-light);
+    border: 1px solid
+      color-mix(in srgb, var(--color-neutral-base), transparent 50%);
+    min-width: 20rem;
+    padding: 0.6rem 1rem;
+
+    &::placeholder {
+      color: color-mix(in srgb, var(--color-neutral-base), transparent 40%);
+    }
+  }
+
+  & .center-all {
+    grid-column: span 2;
+
+    & button {
+      font-size: var(--step-0);
+    }
+  }
 }

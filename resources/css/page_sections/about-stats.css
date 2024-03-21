@@ -1,0 +1,51 @@
+.stats {
+  margin-block-start: calc(var(--section-spacer) * -0.25);
+  margin-block-end: var(--section-spacer);
+
+  & .stat {
+    position: relative;
+    text-align: center;
+
+    &.flow {
+      --flow-space: 0.5rem;
+    }
+
+    &:not(:first-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: -1.5rem;
+        width: 1px;
+        height: 1.5rem;
+        background-color: var(--color-primary-base);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3rem;
+        bottom: 0;
+        left: -1.5rem;
+        width: 1px;
+        height: auto;
+        background-color: color-mix(
+          in srgb,
+          var(--color-neutral-base),
+          transparent 75%
+        );
+      }
+    }
+  }
+
+  & .number {
+    font-size: var(--step-4);
+    font-weight: var(--font-heading-weight);
+    color: var(--color-primary-base);
+
+    &::after {
+      content: "+";
+      opacity: 0.6;
+    }
+  }
+}

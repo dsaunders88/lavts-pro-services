@@ -5,7 +5,7 @@
 
 <div class="content-wrapper">
   {{ featured_case_study }}
-    <article class="case-study-preview">
+    <article class="case-study-preview | has-bg-element">
       <a class="img-wrapper" href="{{ url }}">
         {{ glide :src="featured_image" width="900" format="webp" }}
           <img
@@ -21,14 +21,18 @@
       </a>
       <div class="text | flow">
         <header>
-          <div class="eyebrow | small-title">Case Study</div>
+          <div class="eyebrow | small-title text-faded">Case Study</div>
           <h3 class="heading">
             <a href="{{ url }}">{{ preview_title }}</a>
           </h3>
         </header>
         <p class="description">{{ preview_text_description }}</p>
-        <a href="{{ url }}">{{ preview_link_text }}</a>
+        <div class="link has-arrow">
+          <a href="{{ url }}">{{ preview_link_text }}</a>
+          <i class="fa-solid fa-chevron-right fa-2xs"></i>
+        </div>
       </div>
+      <img class="bg-element" src="/images/svg/data-lines.svg" alt="" />
     </article>
   {{ /featured_case_study }}
 </div>

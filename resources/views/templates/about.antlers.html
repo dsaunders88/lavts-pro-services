@@ -1,0 +1,18 @@
+<main class="about-page" id="content">
+  <article class="hero">
+    <div class="flow">
+      <header class="heading | text-gradient">
+        <div class="eyebrow | small-title">{{ title || 'Get Started' }}</div>
+        {{ hero_heading_highlight }}
+      </header>
+      <p>
+        {{ hero_description }}
+      </p>
+    </div>
+  </article>
+  <article class="content-wrapper">
+    {{ partial:page_sections/about_stats }}
+  </article>
+  {{ partial:page_sections/about_services }}
+  {{ partial:page_sections/team_grid }}
+</main>

@@ -15,6 +15,18 @@
   }
 }
 
+.dark {
+  background: var(--color-neutral-darkest);
+  color: var(--color-text-body-dark);
+}
+
+.has-bg-element {
+  & > :is(*:not(.bg-element)) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 /* Animations */
 
 @keyframes fade-up {

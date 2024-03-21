@@ -1,10 +1,8 @@
 .why-benefits {
-  /* background-color: var(--color-neutral-light); */
-  /* padding-block: var(--section-spacer); */
+  margin-block-start: 14rem;
   margin-block-end: var(--section-spacer);
 
   & .content-wrapper {
-    overflow: hidden;
     border-radius: var(--rounded-corners);
 
     & .bg-element {
@@ -12,16 +10,30 @@
     }
   }
 
+  & .featured-image {
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--rounded-corners);
+    max-width: 46rem;
+    top: -6rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    & img {
+      border-radius: var(--rounded-corners);
+    }
+  }
+
   & .grid-9 {
-    padding-block: var(--section-spacer);
+    padding-block-end: var(--section-spacer);
     padding-inline: var(--space-xl);
 
-    & > :first-child {
+    & .sticky {
       position: sticky;
-      top: 2rem;
-      place-self: flex-start;
+      top: var(--space-3xl);
+      align-self: start;
       grid-column: span 4;
-      padding-inline-end: var(--space-xl);
+      padding-right: var(--space-xl);
 
       & p {
         font-size: var(--step-1);
@@ -61,6 +73,7 @@
     row-gap: var(--space-m); */
 
     & svg {
+      height: 2.5rem;
       width: 2.5rem;
       color: var(--color-primary-base);
     }

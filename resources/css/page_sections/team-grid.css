@@ -1,0 +1,33 @@
+.team-grid {
+  margin-block: var(--section-spacer);
+
+  & .relative {
+    grid-column: span 2;
+  }
+
+  & .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    inset: 0;
+    padding: var(--space-m);
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--color-primary-base), black 50%),
+      transparent 35%
+    );
+    border-radius: var(--rounded-corners-small);
+    overflow: hidden;
+
+    & h3 {
+      color: var(--color-white);
+    }
+  }
+
+  & img {
+    aspect-ratio: 5/7;
+    object-fit: cover;
+    border-radius: var(--rounded-corners-small);
+  }
+}

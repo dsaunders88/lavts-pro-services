@@ -8,6 +8,7 @@
 
 @import "page_sections/about-services";
 @import "page_sections/benefits-preview";
+@import "page_sections/capabilities";
 @import "page_sections/case-study-preview";
 @import "page_sections/clients";
 @import "page_sections/cta";
@@ -18,11 +19,14 @@
 @import "page_sections/industry";
 @import "page_sections/newsletter";
 @import "page_sections/preview-card";
+@import "page_sections/about-stats";
 @import "page_sections/tabs";
 @import "page_sections/team";
+@import "page_sections/team-grid";
 @import "page_sections/why-benefits";
 
 @import "templates/home";
+@import "templates/about";
 @import "templates/interior";
 @import "templates/services";
 @import "templates/estimate";

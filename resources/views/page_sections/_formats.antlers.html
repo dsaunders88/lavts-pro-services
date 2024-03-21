@@ -1,4 +1,4 @@
-<article id="formats" class="formats | content-wrapper">
+<article id="formats" class="formats | content-wrapper dark has-bg-element">
   <div class="flow">
     <header class="heading | text-gradient">
       <div class="eyebrow | small-title">Format Capabilities</div>
@@ -6,22 +6,13 @@
     </header>
     <p>{{ formats_text_description }}</p>
   </div>
-  {{# {{ productId = woocommerce_product_id }} #}}
-  {{#
-    <div
-      id="formats"
-      hx-get="/formats/{{ productId }}"
-      hx-trigger="load"
-      hx-target="#formats"
-    ></div>
-  #}}
   {{ service_categories }}
     {{ serviceCategory = title | lower }}
     <ul role="list">
-      {{ collection from="formats" taxonomy:service_categories="{{serviceCategory}}" }}
-        <li>{{ title }}</li>
+      {{ collection from="formats" sort="title" taxonomy:service_categories="{{serviceCategory}}" }}
+        <li class="button-link primary">{{ title }}</li>
       {{ /collection }}
     </ul>
   {{ /service_categories }}
-  <img class="bg-image" src="/images/data-bg.png" alt="" />
+  <img class="bg-element" src="/images/svg/data-lines.svg" alt="" />
 </article>

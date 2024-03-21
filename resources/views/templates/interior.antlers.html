@@ -1,8 +1,3 @@
-{{#
-  {{ push:styles }}
-    {{ vite src="resources/css/templates/interior.css" }}
-  {{ /push:styles }}
-#}}
 <main class="interior-page" id="content">
   {{ partial:page_sections/hero_interior }}
   <div class="industry | content-wrapper">
@@ -25,10 +20,17 @@
       </ul>
     </div>
   </div>
+  {{ partial:page_sections/clients }}
   <div class="why-benefits">
     <div class="content-wrapper | dark">
+      <div class="featured-image | image-wrapper">
+        {{ glide src="/images/vhs-deck.jpg" width="900" format="webp" }}
+          <img src="{{ url }}" width="900" alt="{{ alt }}" />
+        {{ /glide }}
+        <div class="underlay" data-position="top-right"></div>
+      </div>
       <div class="grid-9">
-        <div class="flow">
+        <div class="sticky flow">
           <header class="heading | text-gradient">
             <div class="eyebrow | small-title">Pro Benefits</div>
             <h2>
@@ -42,31 +44,35 @@
           </p>
         </div>
         <div class="entries">
-          {{ entries }}
+          {{ collection from="{benefits}" }}
             <article class="flow" id="{{ slug }}">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"
-                />
-              </svg>
+              {{ partial:components/hero_icons icon_name="{{preview_icon}}" }}
+              {{#
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"
+                  />
+                </svg>
+              #}}
               <h3>{{ title }}</h3>
               <div>{{ content }}</div>
             </article>
-          {{ /entries }}
+          {{ /collection }}
         </div>
       </div>
-      <div class="bg-element"></div>
+      {{# <div class="bg-element"></div> #}}
     </div>
   </div>
+  {{ partial:page_sections/faqs }}
   {{ partial:page_sections/cta }}
   {{ partial:page_sections/newsletter }}
 </main>

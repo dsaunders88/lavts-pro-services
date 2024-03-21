@@ -23,17 +23,76 @@ tabs:
             import: presentation
             prefix: presentation_
       -
+        display: Clients
+        fields:
+          -
+            handle: clients_section_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Clients Section Title'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: clients_logos
+            field:
+              mode: list
+              container: images
+              folder: logos
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Clients Logos'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
         display: Benefits
         fields:
           -
-            handle: entries
+            handle: benefits
             field:
               mode: default
-              create: false
-              collections:
-                - benefits
-              type: entries
-              display: Entries
+              type: collections
+              display: Benefits
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: FAQs
+        fields:
+          -
+            handle: faqs
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_faq:
+                      display: 'New FAQ'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: faq
+                          prefix: faq_
+              type: replicator
+              display: FAQs
               listable: hidden
               instructions_position: above
               visibility: visible
